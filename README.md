@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Cài đặt
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Clone project này về và cd vào project
+2. Mở terminal (nhớ ở đúng folder)-> npm install
+3. npm audit fix
+4. npm start
+5. Tạo branch mới để code -> push code lên github -> sau khi code được review và merge vào master thì delete branch
 
-## Available Scripts
+## Các thư viện sử dụng trong dự án
+1. react-router-dom
+2. react-smooth-dnd
+3. framer-motion
+4. node-sass
+5. notistack
+6. formik
 
-In the project directory, you can run:
+## Quy tắc code chung
+1. Mỗi tab tương ứng 4 spaces
+2. Bắt buộc kết thúc dòng với dấu chấm phẩy
+3. Đuôi file là .js chứ không phải là .jsx, chọn ngôn ngữ gõ là React (góc phải phía dưới)
+4. Có thể dùng class hay function components đều ok
+5. Bắt buộc dùng scss và nhớ sử dụng các mixins và variables
 
-### `yarn start`
+### Quy tắc làm việc với folder
+1. Cấu trúc folder như thế này
+    common/                 -> Đây là folder chung này
+    Avatar.js               -> Đây là components
+    Avatar.scss             -> Đây là scss này
+    AvatarDetails.js        -> Đây là components
+    index.js                -> Đây là page chung, nơi chứa các components con khác
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    feed/
+    index.js
+    Feed.js
+    Feed.css
+    FeedStory.js
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    profile/
+    index.js
+    Profile.js
+    ProfileHeader.js
+    ProfileHeader.css
 
-### `yarn test`
+2. Cập nhật routing
+    Nếu có nested routing trong components thì tự tạo riêng 1 file routing để phân route
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Import file
+1. IMPORT CHUNG
+    Cứ hiểu folder mặc định là src rồi / xuống các folder con
+2. SCSS
+    @import "assets/scss/mixins.scss";
+    @import "assets/scss/variables.scss";
+3. IMAGES
+    @import "assets/images/{tên ảnh}";
