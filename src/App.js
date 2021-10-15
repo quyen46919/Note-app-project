@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import AccountPage from './components/AccountPage';
 import LoginPage from './components/LoginPage';
@@ -13,13 +13,13 @@ function App() {
         <div className="App">
             <BrowserRouter>
                 <Switch>
-                    <Route path="/" component={IntroPage} exact/>
-                    <Route path="/home" component={HomePage} exact/>
-                    <Route path="/account" component={AccountPage} exact/>
-                    <Route path="/login" component={LoginPage} exact/>
-                    <Route path="/register" component={RegisterPage} exact/>
-                    <Route path="/note" component={NotePage} exact/>
-                    <Route component={NotFoundPage}/>
+                    <Route path="/" component={IntroPage} exact />
+                    <Route path="/home" component={HomePage} exact />
+                    <Route path="/account" component={AccountPage} exact />
+                    <Route path="/login" component={LoginPage} exact />
+                    <Route path="/register" component={RegisterPage} exact />
+                    <Route path="/note" component={NotePage} exact />
+                    <Route component={NotFoundPage} />
                 </Switch>
             </BrowserRouter>
         </div>

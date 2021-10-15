@@ -6,13 +6,17 @@
 4. npm start
 5. Tạo branch mới để code -> push code lên github -> sau khi code được review và merge vào master thì delete branch
 
-## Các thư viện sử dụng trong dự án
+# Extension
+1. Prettier
+
+## Các thư viện chính sử dụng trong dự án
 1. react-router-dom
 2. react-smooth-dnd
 3. framer-motion
 4. node-sass
 5. notistack
 6. formik
+7. material ui v5
 
 ## Quy tắc code chung
 1. Mỗi tab tương ứng 4 spaces
