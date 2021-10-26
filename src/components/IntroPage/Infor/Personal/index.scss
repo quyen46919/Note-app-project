@@ -1,0 +1,57 @@
+@import "assets/scss/variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Work+Sans:wght@100;500&family=Zen+Kurenaido&display=swap');
+.intro-personal{
+    width: 287.54px;
+    height: 422.05px;
+    // background: #d10f0f;
+    box-shadow: 0px 1.06496px 10.6496px rgba(0, 0, 0, 0.1);
+
+    // background-color: chartreuse;
+    .personal__bacgruond-img{
+        height: 301.47px;
+        width: 287.54px;
+
+        display: flex;
+
+        .personal__img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+            float: left;
+        }
+        .infor__inforicon{
+            margin-top: 34.97px;
+            margin-left: -42px;
+            cursor: pointer;
+            opacity: 0;
+        }
+    }
+    .personal__name{
+        font-family: Work Sans;
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: center;
+        margin: 0;
+        margin-top: 28.94px;
+        color: $black-text-color-6;
+    }
+    .personal__job{
+        font-family: Work Sans;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: center;
+        margin: 0;
+        margin-top: 14.47px;
+        color: $gray-text-color-1;
+        margin-bottom: 18.09px;
+    }
+
+}
+

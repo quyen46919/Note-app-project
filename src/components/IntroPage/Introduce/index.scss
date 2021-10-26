@@ -1,0 +1,99 @@
+@import 'assets/scss/variables';
+
+.intro-introduce{
+    width: calc(1440px - 145.24px);
+    height: 425.32px;
+    // background-color: chartreuse;
+    margin: auto;
+
+    display: flex;
+    margin-left: 96px;
+    margin-right: 49.24px;
+
+    .introduce__content{
+        width: 548px;
+        height: 100%;
+        // background-color: chocolate;
+        float: left;
+        z-index: 5;
+
+        .introduce__image{
+            height: 112px;
+            width: 548px;
+            margin-top: 13px;
+            
+
+            .introduce__imgcontent{
+                height: 100%;
+                width: 100%;
+                margin-left: -24px;
+            }
+        }
+        .introduce__text{
+            height: 84px;
+            width: 488px;
+            // background-color: darkcyan;
+
+            p{
+                font-family: Roboto;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 21px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+        .introduce__bnt-icon{
+            height: 64.34px;
+            width: 100%;
+            margin-top: 55.34px;
+            // background-color: darkgray;
+
+            display: flex;
+            align-items: center;
+
+            .introduce__button{
+                height: 61px;
+                width: 244px;
+                // background-color: darkgreen;
+
+                .introduce__btn{
+                    height: 100%;
+                    width: 100%;
+
+                    border-radius: 5px;
+                    background: #18A0FB;
+                    color: $white;
+                    text-transform: none;
+                }
+            }
+            .introduce__icon{
+                height: 100%;
+                width: 168px;
+                // background-color: darkmagenta;
+                margin-left: 32px;
+                
+                .introduce__imgicon{
+                    height: 100%;
+                    width: 100%;
+                    cursor: pointer;
+                }
+            }
+        }
+
+
+    }
+    .introduce__img{
+        width: 763px;
+        height: 100%;
+        // background-color: cornflowerblue;
+        float: left;
+        z-index: 0;
+
+        .introduce__imgcontent{
+            height: 100%;
+            width: 100%;
+        }
+    }
+}

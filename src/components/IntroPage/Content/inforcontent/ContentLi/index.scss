@@ -1,0 +1,15 @@
+@import "assets/scss/variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Roboto:wght@100&family=Work+Sans:wght@100;400;500&display=swap');
+.intro-contentli{
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150.6%;
+    color:$white;
+    list-style-type: none;
+    text-align: left;
+
+    margin: 0;
+    margin-bottom: 11px;
+}

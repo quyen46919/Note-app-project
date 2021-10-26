@@ -1,0 +1,13 @@
+@import "assets/scss/variables.scss";
+.intro-inforicon{
+    height: auto;
+    width: 42.6px;
+    .inforicon__imgicon{
+        margin-bottom: 6.03px;
+    }
+    .inforicon__imgicon:nth-child(1) {
+        .intro-icon{
+            background: $blue;
+        }
+      }
+}

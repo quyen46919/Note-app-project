@@ -1,0 +1,129 @@
+@import "assets/scss/variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Roboto:wght@100&family=Work+Sans:wght@100;500&family=Zen+Kurenaido&display=swap');
+.intro-content{
+    width: 1440px;
+    height: 359px;
+    background: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content__contentbox{
+        height: 238px ;
+        width: 1170px;
+        // background: chocolate;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .content__box{
+            height: 100%;
+            width: 264.75px;
+            // background: cornflowerblue;
+            
+            display: flex;
+            flex-direction: column;
+
+            
+
+            .content__logo{
+                
+                margin-top: 15px;
+                height: 58.58px;
+                width: 144px;
+            }
+            .content__text{
+                font-family: Work Sans;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+
+                margin: 0;
+                margin-bottom: 0;
+                margin-top: 30px;
+                color: $white;
+            }
+            .content__icon{
+                margin-top: 18px;
+                .intro-inforicon{
+                    display: flex;
+                    flex-direction: row;
+
+                    .inforicon__imgicon{
+                        .intro-icon{
+                            margin-right: 27px;
+                            height: 40px;
+                            width: 40px;
+                            
+                            
+                        }
+                        
+                        
+                    }
+                    .inforicon__imgicon:nth-child(1) .intro-icon .icon__imgicon{
+                        height: 20px;
+                        width: 10.5px;
+                    }
+                    .inforicon__imgicon:nth-child(2) .intro-icon .icon__imgicon{
+                        height: 20px;
+                        width: 20px;
+                    }
+                    .inforicon__imgicon:nth-child(3) .intro-icon .icon__imgicon{
+                        height: 20.38px;
+                        width: 16.37px;
+                    }
+                    .inforicon__imgicon:nth-child(4) .intro-icon .icon__imgicon{
+                        height: 18.01px;
+                        width: 18.01px;
+                    }
+                    
+                    
+                }
+            }
+        }
+        
+        .content__button-icon{
+            margin-top: 25px;
+            width: 270px;
+            height: 60px;
+            // background-color: crimson;
+
+            display: flex;
+            flex-direction: row;
+            .content__button{
+                width: 189px;
+                border: 1px solid $blue;
+                box-sizing: border-box;
+                label{
+                    //styleName: H6-16px (paragraph);
+                    font-family: Work Sans;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: 0em;
+                    text-align: center;
+                    color: $gray-text-color-1;
+                }
+            }
+            .content__icon{
+                height: 60px;
+                width: 81px;
+                background-color: $blue;
+                margin-top: 0;
+                cursor: pointer;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+        }
+
+    }
+}
+
