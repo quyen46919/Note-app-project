@@ -34,7 +34,7 @@ function NoteTable() {
     const [newColumnTitle, setNewColumnTitle] = useState('');
 
     useEffect(() => {
-        const boardFromDb = initialNoteData.boards.find(board => board.id === 'board-1') || [];
+        const boardFromDb = initialNoteData.boards.find(board => board.id === 'board-2') || [];
         if (boardFromDb) {
             setBoard(boardFromDb);
             setColumns(mapOrder(boardFromDb.columns, boardFromDb.columnOrder, 'id'));
