@@ -8,7 +8,7 @@
     display: flex;
     grid-template: row;
     justify-content: space-between;
-    .infor-informer:nth-child(2) {
+    .infor-informer:hover {
         .personal__name{
             color: $blue;
         }
@@ -16,9 +16,10 @@
             color: $cyan-text-color-2;
         }
     }
-    .infor-informer:nth-child(1) {
+    .infor-informer:hover {
         .infor__inforicon{
             opacity: 1;
+            z-index: 1;
         }
     }
 }

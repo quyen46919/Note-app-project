@@ -96,6 +96,8 @@
             flex-direction: row;
             .content__button{
                 width: 189px;
+                outline: none;
+                filter: none;
                 border: 1px solid $blue;
                 box-sizing: border-box;
                 label{

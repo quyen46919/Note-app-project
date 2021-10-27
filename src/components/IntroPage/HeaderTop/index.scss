@@ -8,11 +8,14 @@
     margin: auto;
     display: flex;
     align-items: center;
+    z-index: 10;
+
 
 
     .headertop__logo{
         flex: 4;
         height: auto;
+        cursor: pointer;
         // background-color: chocolate;
     
         display: flex;
@@ -51,6 +54,8 @@
             letter-spacing: 0em;
             text-align: left;
             color: $black-text-color-3 ;
+
+            cursor: pointer;
         }
         li:nth-child(3) {
             color: $cyan-text-color-1;
@@ -59,6 +64,7 @@
         .headertop__avatar{
             height: 34px;
             width: 34px;
+            cursor: pointer;
             .headertop__img{
                 height: 100%;
                 width: 100%;

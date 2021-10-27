@@ -70,14 +70,29 @@
             }
             .introduce__icon{
                 height: 100%;
-                width: 168px;
+                width: 180px;
                 // background-color: darkmagenta;
                 margin-left: 32px;
+                display: flex;
+                align-items: center;
+                margin-top: 5px;
                 
-                .introduce__imgicon{
-                    height: 100%;
-                    width: 100%;
+                display: flex;
+                .introduce__box-icon{
+                    height: 42px;
+                    width: 42px;
+                    // background-color: yellow;
+                    margin-left: 14px;
+                    border-radius: 50%;
                     cursor: pointer;
+                    border: 2px solid black;
+
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .fab{
+                        font-size: 22px;
+                    }
                 }
             }
         }

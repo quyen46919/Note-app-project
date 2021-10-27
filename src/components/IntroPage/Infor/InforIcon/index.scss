@@ -4,10 +4,17 @@
     width: 42.6px;
     .inforicon__imgicon{
         margin-bottom: 6.03px;
-    }
-    .inforicon__imgicon:nth-child(1) {
         .intro-icon{
-            background: $blue;
+            color:$light-blue;
+            cursor: pointer;
+
+
         }
-      }
+    }
+    .inforicon__imgicon:hover {
+        .intro-icon{
+            background: $light-blue;
+            color:$white;
+        }
+    }
 }

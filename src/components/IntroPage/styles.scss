@@ -5,59 +5,77 @@
     height: auto;
     width: 1440px;
     margin: auto;
+    display: flex;
+    .intro__content{ 
+        z-index: 10;
+        .intro__headertop{
+            margin-top: 19.79px;
+            margin-bottom: 132.75px;
+        }
+        .intro__introduce-img{
+            display: flex;
+            .intro__img{
+                height: 200px;
+                width: 276px;
+                margin-left: -1216px;
+                margin-top: -55px;
+                z-index: -10;
+            }
+        }
+        .intro__feature-tex{
+            font-family: Work Sans;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 56px;
+            letter-spacing: 0em;
+            text-align: center;
+            color: $black-text-color-4;
 
-    .intro__headertop{
-        margin-top: 19.79px;
-        margin-bottom: 132.75px;
+            margin-top: 238.68px;
+            margin-bottom: 80px;
+        }
+        .intro__member-tex{
+            font-family: Work Sans;
+            font-size: 17px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 26px;
+            letter-spacing: 0em;
+            text-align: left;
+            text-align: center;
+            margin-bottom: 0.09px;
+            color: $gray-text-color-1;
+        }
+        .intro__aboutus-tex{
+            //styleName: Headlines;
+            font-family: Work Sans;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 56px;
+            letter-spacing: 0em;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            color: $black-text-color-4;
+            margin-bottom: 60px;
+        }
+        .intro__someimages-tex{
+            font-family: Roboto;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 21px;
+            letter-spacing: 0em;
+            text-align: center;
+            margin-top: 161.95px;
+            margin-bottom: 30px;
+        }
     }
-    .intro__feature-tex{
-        font-family: Work Sans;
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 56px;
-        letter-spacing: 0em;
-        text-align: center;
-        color: $black-text-color-4;
-
-        margin-top: 238.68px;
-        margin-bottom: 80px;
-    }
-    .intro__member-tex{
-        font-family: Work Sans;
-        font-size: 17px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 26px;
-        letter-spacing: 0em;
-        text-align: left;
-        text-align: center;
-        margin-bottom: 0.09px;
-        color: $gray-text-color-1;
-    }
-    .intro__aboutus-tex{
-        //styleName: Headlines;
-        font-family: Work Sans;
-        font-size: 48px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 56px;
-        letter-spacing: 0em;
-        text-align: center;
-        padding: 0;
-        margin: 0;
-        color: $black-text-color-4;
-        margin-bottom: 60px;
-    }
-    .intro__someimages-tex{
-        font-family: Roboto;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 21px;
-        letter-spacing: 0em;
-        text-align: center;
-        margin-top: 161.95px;
-        margin-bottom: 30px;
+   
+    .intro__imgright img{
+        margin-left: -666px;
+        z-index: -10;
     }
 }
