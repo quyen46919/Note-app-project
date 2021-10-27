@@ -1,0 +1,5 @@
+@import 'assets/scss/variables';
+.note-page {
+    height: calc(100% - $headerHeigh);
+    width: 100%;
+}
