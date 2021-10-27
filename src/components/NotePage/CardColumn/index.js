@@ -168,14 +168,14 @@ function CardColumn(props) {
                     spellCheck="false"
                 />
                 <div>
-                    <IconButton size="small" className={classes.headerButtonIcon}>
+                    <IconButton size="small" className={classes.headerButtonIcon} onClick={e => e.preventDefault()}>
                         <Checkbox
                             icon={<StarBorder className={ classes.headerIcon}/>}
                             checkedIcon={<Star className={`${classes.headerIcon} ${classes.favorite}`}/>}
                         />
                     </IconButton>
-                    <IconButton size="small" className={classes.headerButtonIcon}>
-                        <Close className={classes.headerIcon} onClick={handleConfirmPopUpOpen}/>
+                    <IconButton size="small" className={classes.headerButtonIcon} onClick={handleConfirmPopUpOpen}>
+                        <Close className={classes.headerIcon}/>
                     </IconButton>
                 </div>
             </header>

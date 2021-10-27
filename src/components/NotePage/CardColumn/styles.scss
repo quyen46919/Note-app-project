@@ -7,7 +7,7 @@ $backgroundColor: #F4F6FA;
 
 .card-column {
     width: 300px;
-    height: calc(100vh - #{$headerHeigh} - 1.5rem - #{$noteTableHeaderHeight});
+    height: calc(100vh - #{$headerHeigh} - 18px - #{$noteTableHeaderHeight});
     overflow: hidden;
     background-color: $silver;
     border-radius: 5px;

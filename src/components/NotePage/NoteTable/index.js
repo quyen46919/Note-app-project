@@ -196,7 +196,7 @@ function NoteTable() {
                     open={true}
                     aria-labelledby="form-dialog-title"
                     fullWidth
-                    disableBackdropClick
+                    disablebackdropclick="true"
                 >
                     <DialogTitle id="form-dialog-title" className={classes.dialogTitle}>
                     Tạo mới cột ghi chú
