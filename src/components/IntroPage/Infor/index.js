@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.scss';
+import './styles.scss';
 import Personal from '../Personal';
 import Phatimg from 'assets/images/intro-ChauPhat.jpg';
 import Quyenimg from 'assets/images/intro-ChauQuyen.jpg';

@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.scss';
+import './styles.scss';
 import ContentTitle from '../ContentTitle';
 import ContentLi from '../ContentLi';
 

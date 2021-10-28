@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.scss';
+import './styles.scss';
 import content from 'assets/images/intro-introduce.png';
 import introduceimg from 'assets/images/intro-introduceimg.png';
 import penimg from 'assets/images/intro_penimg.png';

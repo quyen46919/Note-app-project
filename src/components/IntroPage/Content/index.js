@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.scss';
+import './styles.scss';
 import contentlogo from 'assets/images/intro-contentlogo.png';
 import InforIcon from '../InforIcon';
 import InforContentCompany from '../InforContent/indexcompany';

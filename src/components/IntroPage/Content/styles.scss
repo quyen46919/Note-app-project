@@ -13,19 +13,23 @@
         height: 238px ;
         width: 1170px;
         // background: chocolate;
-        display: grid;
-        grid-template-columns: 264.75px;
-        grid-template-rows: 238px ;
-        grid-column-gap:37px;
+        // display: grid;
+        // grid-template-columns: 264.75px;
+        // grid-template-rows: 238px ;
+        // grid-column-gap:37px;
+        display: flex;
+        justify-content: space-between;
 
         .content__box{
+            height: 264.75px;
+            width: 270px;
             // background: cornflowerblue;
             display: flex;
             flex-direction: column;
 
             .content__logo{
                 margin-top: 15px;
-                height: 58.58px;
+                height: 42.58px;
                 width: 144px;
             }
 

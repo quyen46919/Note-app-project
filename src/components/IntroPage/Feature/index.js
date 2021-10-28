@@ -3,7 +3,7 @@ import Text from '../Text';
 import img1 from 'assets/images/intro-feature-img.png';
 import img2 from 'assets/images/intro-feature-img2.png';
 import img3 from 'assets/images/intro-feature-img1.png';
-import './index.scss';
+import './styles.scss';
 import FadeInWhenVisible from '../FadeInWhenVisible';
 
 

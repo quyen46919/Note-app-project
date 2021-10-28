@@ -1,5 +1,5 @@
 import React from 'react';
-import './index.scss';
+import './styles.scss';
 import logo from 'assets/images/intro_logo.png';
 import logoname from 'assets/images/intro_logoname.png';
 import avatar from 'assets/images/intro_avatar.jpg';

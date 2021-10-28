@@ -1,0 +1,46 @@
+@import "assets/scss/mixins.scss";
+@import "assets/scss/variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Work+Sans:wght@100;500&family=Zen+Kurenaido&display=swap');
+.intro-headerbottom{
+    height: 60px;
+    width: 1440px;
+    margin: auto;
+    background-color: $blue;
+
+    display: flex;
+    align-items: center;
+
+    .headerbottom__logo-text{
+        flex: 1;
+        display: flex;
+        align-items: center;
+
+        .headerbottom__iconbtn{
+            height: 20px;
+            width: 20px;
+            margin-left: 137px;
+            margin-right: 20px;
+        }
+        .headerbottom__p{
+            //styleName: H6-16px (paragraph);
+            font-family: Work Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $white;
+        }
+    }
+    .headerbottom__icon{
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        .headerbottom__muiten{
+            height: 33.33px;
+            width: 33.33px;
+            margin-right: 137px;
+        }
+    }
+}
