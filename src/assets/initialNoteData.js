@@ -437,6 +437,6 @@ export const initialNoteData = {
             title: 'Học Typescript và NextJS',
             columnOrder: [],
             columns: []
-        },
+        }
     ]
 };
