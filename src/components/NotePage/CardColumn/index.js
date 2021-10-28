@@ -52,11 +52,13 @@ function CardColumn(props) {
         content: '',
         cover: ''
     });
+    const [isFavorite, setIsFavorite] = useState(false);
 
     useEffect(() => {
         setColumnTitle(column.title);
+        setIsFavorite(column.isFavorite);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [column.title]);
+    }, [column.title, column.isFavorite]);
 
     const handleConfirmPopUpClose = () => { setConfirm(false); };
     const handleConfirmPopUpOpen = () => { setConfirm(true); };
@@ -154,6 +156,14 @@ function CardColumn(props) {
         e.target.select();
     };
 
+    const handleFavoriteStarClick = () => {
+        const newColumn = {
+            ...column,
+            isFavorite: !isFavorite
+        };
+        updateCardColumn(newColumn);
+    };
+
     return (
         <div className="card-column">
             <header className="column-drag-handle card-column__header">
@@ -168,10 +178,11 @@ function CardColumn(props) {
                     spellCheck="false"
                 />
                 <div>
-                    <IconButton size="small" className={classes.headerButtonIcon} onClick={e => e.preventDefault()}>
+                    <IconButton size="small" className={classes.headerButtonIcon} onClick={handleFavoriteStarClick}>
                         <Checkbox
                             icon={<StarBorder className={ classes.headerIcon}/>}
                             checkedIcon={<Star className={`${classes.headerIcon} ${classes.favorite}`}/>}
+                            checked={isFavorite}
                         />
                     </IconButton>
                     <IconButton size="small" className={classes.headerButtonIcon} onClick={handleConfirmPopUpOpen}>

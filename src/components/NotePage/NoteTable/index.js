@@ -1,6 +1,6 @@
 
 import { Add, CalendarToday, Devices, FilterList, Fullscreen, MoreHoriz } from '@mui/icons-material';
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } from '@mui/material';
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { initialNoteData } from 'assets/initialNoteData';
 import React, { useEffect, useState } from 'react';
@@ -32,6 +32,7 @@ function NoteTable() {
     const [columns, setColumns] = useState([]);
     const [open, setOpen] = useState(false);
     const [newColumnTitle, setNewColumnTitle] = useState('');
+    const [showNoti, setShowNoti] = useState(false);
 
     useEffect(() => {
         const boardFromDb = initialNoteData.boards.find(board => board.id === 'board-2') || [];
@@ -72,6 +73,14 @@ function NoteTable() {
         setOpen(false);
     };
 
+    const handleNotiPopUpOpen = () => {
+        setShowNoti(true);
+    };
+
+    const handleNotiPopUpClose = () => {
+        setShowNoti(false);
+    };
+
     const handleNewColumnTitleChange = (e) => {
         setNewColumnTitle(e.target.value);
     };
@@ -101,6 +110,7 @@ function NoteTable() {
     };
 
     const updateCardColumn = ( newColumn ) => {
+
         const columnIdToUpdate = newColumn.id;
         let newColumns = [ ...columns ];
         const columnIndexToUpdate = newColumns.findIndex(i => i.id === columnIdToUpdate);
@@ -131,6 +141,7 @@ function NoteTable() {
                         variant="outlined"
                         color="inherit"
                         startIcon={<Fullscreen className={classes.toolIcon}/>}
+                        onClick={handleNotiPopUpOpen}
                     >
                         Toàn màn hình
                     </Button>
@@ -139,6 +150,7 @@ function NoteTable() {
                         variant="outlined"
                         color="inherit"
                         startIcon={<Devices />}
+                        onClick={handleNotiPopUpOpen}
                     >
                         Chế độ xem: Đầy đủ
                     </Button>
@@ -147,6 +159,7 @@ function NoteTable() {
                         variant="outlined"
                         color="inherit"
                         startIcon={<FilterList />}
+                        onClick={handleNotiPopUpOpen}
                     >
                         Lọc
                     </Button>
@@ -155,6 +168,7 @@ function NoteTable() {
                         variant="outlined"
                         color="inherit"
                         startIcon={<MoreHoriz />}
+                        onClick={handleNotiPopUpOpen}
                     >
                         Hiện bảng chọn
                     </Button>
@@ -222,6 +236,28 @@ function NoteTable() {
                         </Button>
                         <Button color="primary" onClick={handleClose}>
                             Hủy
+                        </Button>
+                    </DialogActions>
+                </Dialog>
+            }
+            {showNoti &&
+                <Dialog
+                    open={showNoti}
+                    onClose={handleNotiPopUpClose}
+                    aria-labelledby="alert-dialog-title"
+                    aria-describedby="alert-dialog-description"
+                >
+                    <DialogTitle>
+                        Chức năng này chưa được hỗ trợ
+                    </DialogTitle>
+                    <DialogContent>
+                        <DialogContentText id="alert-dialog-description">
+                            Chức năng này vẫn đang trong giai đoạn phát triển, vui lòng chờ cập nhật ở các phiên bản tiếp theo
+                        </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleNotiPopUpClose} color="primary" autoFocus>
+                            Tôi hiểu
                         </Button>
                     </DialogActions>
                 </Dialog>
