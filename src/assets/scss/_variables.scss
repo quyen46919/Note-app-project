@@ -2,8 +2,9 @@
 // DECLARE COLOR GLOBAL VARIABLE
 $white: #ffffff;
 $yellow:#FFCF4D;
-$light-silver:#E5E5E5;
 $silver: #E8EEF9;
+$light-silver:#E5E5E5;
+$light-silver-1: #F5F9FF;
 $light-blue:#51B3F2;
 $blue: #18A0FB;
 $light-orange-1:#FF994F;
@@ -16,9 +17,12 @@ $dark-green:#4DA85C;
 $cyan-green:#3FE9B5;
 $black: #373737;
 
+
 // FONT COLOR
 $black-text-color-1: #2C3337;
 $black-text-color-2: #52535A;
+$black-text-color-3: #616161;
+$black-text-color-4: #4B4B4B;
 $silver-text-color: #9E9E9E;
 
 // DECLARE SIZE GLOBAL VARIABLE
@@ -28,3 +32,7 @@ $md: 768px;         //  ≥768px
 $lg: 992px;         //  ≥992px
 $xl: 1200px;        //  ≥1200px
 $xxl: 1400px;       //  ≥1400px
+
+// COMPONENTS FIXED SIZE
+$headerHeigh: 60px;
+$noteTableHeaderHeight: 50px;

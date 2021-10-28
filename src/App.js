@@ -7,10 +7,12 @@ import IntroPage from './components/IntroPage';
 import HomePage from './components/HomePage';
 import NotePage from './components/NotePage';
 import NotFoundPage from './components/NotFoundPage';
+import Header from 'components/Header';
 
 function App() {
     return (
         <div className="App">
+            <Header/>
             <BrowserRouter>
                 <Switch>
                     <Route path="/" component={IntroPage} exact />
