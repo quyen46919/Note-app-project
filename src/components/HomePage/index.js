@@ -1,11 +1,10 @@
 import React from 'react';
 import './styles.scss';
 
-
 function HomePage() {
     return (
-        <div >
-            this is home page
+        <div>
+            This is home page
         </div>
     );
 }
