@@ -1,0 +1,165 @@
+@import "assets/scss/_variables.scss";
+@import "assets/scss/_mixins.scss";
+.page {
+    height: auto;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    width: 100vw;
+    background-color: $light-silver;
+    @include DisplayFlexColumnCenter($justy: flex-end);
+}
+
+.form {
+    height: 973px;
+    width: 901px;
+    background-color: $white;
+    @include DisplayFlexColumnCenter($justy: flex-start);
+}
+.Login-form--header {
+    height: 101px;
+    width: 901px;
+    // background-color: $dark-green;
+    @include DisplayFlexRowCenter($justy: space-between, $align: flex-end);
+    margin-bottom: 25px;
+    &__left {
+        // background-color: $cyan-green !important;
+        width: 251px;
+        height: 70.43px;
+        @include DisplayFlexRowCenter($justy: space-between);
+
+        cursor: pointer;
+        &_image {
+            height: 69px;
+            width: 69px;
+        }
+    }
+
+    &__right {
+        // background-color: $blue;
+        height: 24px;
+        width: 350px;
+        @include DisplayFlexRowCenter($justy: space-between);
+        // justify: space-between;
+        &_link {
+            width: calc(350px / 2);
+            a {
+                text-decoration: none;
+                font-family: Roboto;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 23px;
+                letter-spacing: 0em;
+                color: $color-link-2;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+        &_language {
+            height: 100%;
+            width: calc(350px / 2);
+            // background-color: red;
+            border-right: 1px solid #999999;
+            .fas {
+                font-size: 20px;
+            }
+            @include DisplayFlexRowCenter();
+            select {
+                width: 130px;
+                font-family: Roboto;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 23px;
+                letter-spacing: 0em;
+                text-align: left;
+                outline: none;
+                border: none;
+                color: $color-lang;
+
+                cursor: pointer;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+.Login-form__input {
+    // background-color: $blue !important ;
+    height: 58px;
+    width: 575px;
+    left: 0px;
+    // top: 96px;
+    margin-top: 38px !important;
+    border-radius: 5px;
+    padding: 16px, 24px, 16px, 24px;
+}
+.Login-form__button {
+    height: 58px;
+    width: 575px;
+    left: 0px;
+    // top: 96px;
+    margin-top: 28px !important;
+    border-radius: 5px;
+    // padding: 16px, 24px, 16px, 0;
+    background-color: $blue !important;
+}
+.Login-form__bottom {
+    height: 38px;
+    width: 575px;
+    // margin-top: 33px !important;
+    // overflow: hidden;
+    margin-top: 17px !important;
+    @include DisplayFlexRowCenter($justy: space-between);
+    &--link {
+        a {
+            text-decoration: none;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 500;
+            color: $color-link;
+        }
+    }
+    &--link:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        transition: 0.25s;
+    }
+}
+.Login-form__footer {
+    width: 575px;
+    @include DisplayFlexColumnCenter();
+    &--icons {
+        width: 308px;
+        height: 48.79px;
+        @include DisplayFlexRowCenter($justy: space-between);
+    }
+}
+.fab {
+    height: 48.79207992553711px;
+    width: 48.79207992553711px;
+    left: 0px;
+    top: 0px;
+    border-radius: 24.396039962768555px;
+    font-size: 48.79207992553711px;
+}
+.fa-google {
+    color: $color-gg;
+}
+.fa-twitter {
+    color: $color-tw;
+}
+.fa-facebook {
+    color: $color-fb;
+}
+.fa-github {
+    color: $color-github;
+}
+
+.Login-form__button--header {
+    width: 901px;
+    background-color: $blue !important;
+    margin-top: 33px;
+    height: 58px;
+}
