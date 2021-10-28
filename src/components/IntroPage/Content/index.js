@@ -1,12 +1,13 @@
 import React from 'react';
 import './index.scss';
 import contentlogo from 'assets/images/intro-contentlogo.png';
-import InforIcon from '../Infor/InforIcon';
-import InforContentCompany from './inforcontent/indexcompany';
-import InforContentSevice from './inforcontent/indexsevice';
-import ContentTitle from './inforcontent/ContentTitle';
-import { TextField } from '@mui/material';
+import InforIcon from '../InforIcon';
+import InforContentCompany from '../InforContent/indexcompany';
+import InforContentSevice from '../InforContent/indexsevice';
+import ContentTitle from '../ContentTitle';
+// import { TextField } from '@mui/material';
 import btnicon from 'assets/images/intro-iconbutton.png';
+
 
 function Content() {
     return (
@@ -28,7 +29,8 @@ function Content() {
                     <p className="content__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem eget varius viverra in.</p>
                     <div className="content__button-icon">
                         <div className="content__button">
-                            <TextField id="outlined-basic" label="info@gmail.com" variant="outlined" />
+                            {/* <TextField id="outlined-basic" label="info@gmail.com" variant="outlined"/> */}
+                            <input className="content__btn" placeholder="info@gmail.com"></input>
                         </div>
                         <div className="content__icon">
                             <img className="content__btnicon" src={btnicon}/>

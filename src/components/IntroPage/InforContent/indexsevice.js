@@ -1,7 +1,7 @@
 import React from 'react';
 import './index.scss';
-import ContentTitle from './ContentTitle';
-import ContentLi from './ContentLi';
+import ContentTitle from '../ContentTitle';
+import ContentLi from '../ContentLi';
 
 function InforContentSevice() {
     return (

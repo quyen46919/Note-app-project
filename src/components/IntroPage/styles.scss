@@ -77,5 +77,11 @@
     .intro__imgright img{
         margin-left: -666px;
         z-index: -10;
+        animation-name:hienra;
+        animation-duration:1s;
     }
+    @keyframes hienra{
+        from{ opacity: 0;}
+        to{ opacity: 1; }
+     }
 }

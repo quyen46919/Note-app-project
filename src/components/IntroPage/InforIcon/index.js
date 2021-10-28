@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.scss';
-import Iconimg from './Iconimg';
+import Iconimg from '../IconImg';
 
 
 function InforIcon() {

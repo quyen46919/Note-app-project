@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.scss';
-import Personal from './Personal';
+import Personal from '../Personal';
 import Phatimg from 'assets/images/intro-ChauPhat.jpg';
 import Quyenimg from 'assets/images/intro-ChauQuyen.jpg';
 import Taiimg from 'assets/images/intro-HuuTai.jpg';

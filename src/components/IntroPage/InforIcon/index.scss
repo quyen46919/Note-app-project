@@ -2,6 +2,7 @@
 .intro-inforicon{
     height: auto;
     width: 42.6px;
+    transition: 0.5s;
     .inforicon__imgicon{
         margin-bottom: 6.03px;
         .intro-icon{
@@ -15,6 +16,7 @@
         .intro-icon{
             background: $light-blue;
             color:$white;
+            transition: 0.8s;
         }
     }
 }
