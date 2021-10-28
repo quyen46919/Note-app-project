@@ -1,6 +1,7 @@
 @import "assets/scss/variables.scss";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Work+Sans:wght@100;500&family=Zen+Kurenaido&display=swap');
 .intro-personal{
+    cursor: pointer;
     width: 287.54px;
     height: 422.05px;
     // background: #d10f0f;
@@ -10,8 +11,8 @@
     .personal__bacgruond-img{
         height: 301.47px;
         width: 287.54px;
-
         display: flex;
+        position: relative;
 
         .personal__img{
             height: 100%;
@@ -21,8 +22,9 @@
             float: left;
         }
         .infor__inforicon{
-            margin-top: 34.97px;
-            margin-left: -42px;
+            position: absolute;
+            top: 34.97px;
+            right: 0;
             cursor: pointer;
             opacity: 0;
             z-index: -1;

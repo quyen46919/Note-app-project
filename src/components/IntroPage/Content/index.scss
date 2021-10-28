@@ -8,43 +8,37 @@
     justify-content: center;
     align-items: center;
 
+
     .content__contentbox{
         height: 238px ;
         width: 1170px;
         // background: chocolate;
-
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 264.75px;
+        grid-template-rows: 238px ;
+        grid-column-gap:37px;
 
         .content__box{
-            height: 100%;
-            width: 264.75px;
             // background: cornflowerblue;
-            
             display: flex;
             flex-direction: column;
 
-            
-
             .content__logo{
-                
                 margin-top: 15px;
                 height: 58.58px;
                 width: 144px;
             }
+
             .content__text{
                 font-family: Work Sans;
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 24px;
-                letter-spacing: 0em;
                 text-align: left;
-
                 margin: 0;
                 margin-bottom: 0;
-                margin-top: 30px;
+                margin-top: 25px;
                 color: $white;
             }
             .content__icon{
@@ -58,30 +52,9 @@
                             margin-right: 27px;
                             height: 40px;
                             width: 40px;
-                            
-                            
-                        }
-                        
-                        
-                    }
-                    .inforicon__imgicon:nth-child(1) .intro-icon .icon__imgicon{
-                        height: 20px;
-                        width: 10.5px;
-                    }
-                    .inforicon__imgicon:nth-child(2) .intro-icon .icon__imgicon{
-                        height: 20px;
-                        width: 20px;
-                    }
-                    .inforicon__imgicon:nth-child(3) .intro-icon .icon__imgicon{
-                        height: 20.38px;
-                        width: 16.37px;
-                    }
-                    .inforicon__imgicon:nth-child(4) .intro-icon .icon__imgicon{
-                        height: 18.01px;
-                        width: 18.01px;
-                    }
-                    
-                    
+
+                        }   
+                    } 
                 }
             }
         }
@@ -113,7 +86,6 @@
                     padding-left: 16px;
                 }
                     ::placeholder{
-                        //styleName: H6-16px (paragraph);
                         font-family: Work Sans;
                         font-size: 16px;
                         font-style: normal;
@@ -123,7 +95,6 @@
                         color: $gray-text-color-1;
                         margin: 0;
                         padding: 0;
-                        // padding-left: 18px;
                     }
             }
             .content__icon{

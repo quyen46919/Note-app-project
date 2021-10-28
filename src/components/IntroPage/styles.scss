@@ -4,23 +4,17 @@
 .intro{
     height: auto;
     width: 1440px;
-    margin: auto;
-    display: flex;
+    margin: 0 auto;
+    // margin-right: 98px;
+    // display: flex;
+    // justify-content: center;
+
+    position: relative;
     .intro__content{ 
         z-index: 10;
         .intro__headertop{
             margin-top: 19.79px;
             margin-bottom: 132.75px;
-        }
-        .intro__introduce-img{
-            display: flex;
-            .intro__img{
-                height: 200px;
-                width: 276px;
-                margin-left: -1216px;
-                margin-top: -55px;
-                z-index: -10;
-            }
         }
         .intro__feature-tex{
             font-family: Work Sans;
@@ -73,15 +67,4 @@
             margin-bottom: 30px;
         }
     }
-   
-    .intro__imgright img{
-        margin-left: -666px;
-        z-index: -10;
-        animation-name:hienra;
-        animation-duration:1s;
-    }
-    @keyframes hienra{
-        from{ opacity: 0;}
-        to{ opacity: 1; }
-     }
 }

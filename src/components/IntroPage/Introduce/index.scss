@@ -1,11 +1,11 @@
 @import 'assets/scss/variables';
+// @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Roboto:wght@100&family=Work+Sans:wght@100;500&family=Zen+Kurenaido&display=swap');
 
 .intro-introduce{
     width: calc(1440px - 145.24px);
     height: 425.32px;
     // background-color: chartreuse;
     margin: auto;
-
     display: flex;
     margin-left: 96px;
     margin-right: 49.24px;
@@ -16,12 +16,20 @@
         // background-color: chocolate;
         float: left;
         z-index: 5;
+        position: relative;
+        .introduce__pen-img{
+            height: 200px;
+            width: 276px;
+            top: -61px;
+            left: 132px;
+            z-index: -10;
+            position: absolute;
+        }
 
         .introduce__image{
             height: 112px;
             width: 548px;
             margin-top: 13px;
-            
 
             .introduce__imgcontent{
                 height: 100%;
@@ -49,7 +57,6 @@
             width: 100%;
             margin-top: 55.34px;
             // background-color: darkgray;
-
             display: flex;
             align-items: center;
 
@@ -61,11 +68,16 @@
                 .introduce__btn{
                     height: 100%;
                     width: 100%;
-
                     border-radius: 5px;
                     background: #18A0FB;
                     color: $white;
                     text-transform: none;
+
+                    font-family: Roboto;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 23px;
                 }
             }
             .introduce__icon{
@@ -76,7 +88,6 @@
                 display: flex;
                 align-items: center;
                 margin-top: 5px;
-                
                 display: flex;
                 .introduce__box-icon{
                     height: 42px;
@@ -86,7 +97,6 @@
                     border-radius: 50%;
                     cursor: pointer;
                     border: 2px solid black;
-
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -104,11 +114,16 @@
         height: 100%;
         // background-color: cornflowerblue;
         float: left;
-        z-index: 0;
 
         .introduce__imgcontent{
             height: 100%;
             width: 100%;
         }
     }
+}
+.intro__imgright img{
+    right: 0;
+    position: absolute;
+    z-index: -10;
+    top: -19.79px;
 }

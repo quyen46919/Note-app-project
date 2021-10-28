@@ -2,7 +2,7 @@ import React from 'react';
 import './index.scss';
 import content from 'assets/images/intro-introduce.png';
 import introduceimg from 'assets/images/intro-introduceimg.png';
-// import icon from 'assets/images/intro-contenticon.png';
+import penimg from 'assets/images/intro_penimg.png';
 import { Button } from '@mui/material';
 
 function Introduce() {
@@ -32,6 +32,7 @@ function Introduce() {
                         </div>
                     </div>
                 </div>
+                <img className="introduce__pen-img" src={penimg}/>
             </div>
             <div className="introduce__img">
                 <img className="introduce__imgcontent" src={introduceimg}/>
