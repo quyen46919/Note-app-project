@@ -9,6 +9,7 @@ export const initialNoteData = {
                 {
                     id: 'column-1',
                     boardId: 'board-1',
+                    isFavorite: false,
                     title: 'To do column',
                     cardOrder: ['card-1', 'card-2', 'card-3', 'card-4', 'card-5', 'card-6', 'card-7'],
                     cards: [
@@ -68,6 +69,7 @@ export const initialNoteData = {
                 {
                     id: 'column-2',
                     boardId: 'board-2',
+                    isFavorite: false,
                     title: 'To do column 2',
                     cardOrder: ['card-8', 'card-9', 'card-10', 'card-11', 'card-12'],
                     cards: [
@@ -112,6 +114,7 @@ export const initialNoteData = {
                 {
                     id: 'column-3',
                     boardId: 'board-3',
+                    isFavorite: true,
                     title: 'To do column 3',
                     cardOrder: ['card-13', 'card-14'],
                     cards: [
@@ -134,6 +137,7 @@ export const initialNoteData = {
                 {
                     id: 'column-4',
                     boardId: 'board-1',
+                    isFavorite: true,
                     title: 'To do column 3',
                     cardOrder: ['card-13', 'card-14'],
                     cards: [
@@ -193,12 +197,13 @@ export const initialNoteData = {
         {
             id: 'board-2',
             lastUpdate: '5/10/2021',
-            title: 'Material UI v5',
+            title: 'Material UI v5 Material UI v5Material UI v5Material UI v5Material UI v5Material UI v5Material UI v5',
             columnOrder: ['column-2', 'column-3', 'column-1', 'column-4'],
             columns: [
                 {
                     id: 'column-1',
                     boardId: 'board-2',
+                    isFavorite: true,
                     title: 'Button',
                     cardOrder: ['card-1', 'card-2', 'card-3', 'card-4', 'card-5', 'card-6', 'card-7'],
                     cards: [
@@ -259,6 +264,7 @@ export const initialNoteData = {
                 {
                     id: 'column-2',
                     boardId: 'board-2',
+                    isFavorite: true,
                     title: 'Text Field',
                     cardOrder: ['card-8', 'card-9', 'card-10', 'card-11', 'card-12'],
                     cards: [
@@ -305,6 +311,7 @@ export const initialNoteData = {
                 {
                     id: 'column-3',
                     boardId: 'board-2',
+                    isFavorite: true,
                     title: 'Lists',
                     cardOrder: ['card-13', 'card-14'],
                     cards: [
@@ -328,6 +335,7 @@ export const initialNoteData = {
                 {
                     id: 'column-4',
                     boardId: 'board-2',
+                    isFavorite: false,
                     title: 'To do column 3',
                     cardOrder: ['card-13', 'card-14'],
                     cards: [
@@ -429,6 +437,6 @@ export const initialNoteData = {
             title: 'Học Typescript và NextJS',
             columnOrder: [],
             columns: []
-        },
+        }
     ]
 };

@@ -4,9 +4,7 @@
 .note-table {
     width: 100%;
     height: auto;
-    // height: auto;
     margin-top: headerHeigh;
-    // background-color: red;
     @include displayFlex(column, nowrap, flex-start);
 
     &__header {
@@ -21,6 +19,13 @@
         color: $black-text-color-4;
 
         * { margin: 0 }
+
+        h3 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 350px;
+        }
 
         @include maxWidth(992px){
             height: auto;
@@ -69,7 +74,6 @@
     }
 
     &__add {
-        // width: 30px;
         height: 100%;
         @include displayFlex();
         justify-content: flex-start;
