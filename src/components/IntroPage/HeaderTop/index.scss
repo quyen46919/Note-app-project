@@ -1,0 +1,84 @@
+@import 'assets/scss/variables';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Roboto:wght@100&family=Work+Sans:wght@100;500&family=Zen+Kurenaido&display=swap');
+
+.intro-headertop{
+    height: auto;
+    width: calc(1440px - 196.48px);
+    // background-color: aqua;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+
+
+
+    .headertop__logo{
+        flex: 4;
+        height: auto;
+        cursor: pointer;
+        // background-color: chocolate;
+    
+        display: flex;
+        align-items: center;
+
+        .headertop__img{
+            height: 42.46px;
+            width: 42.46px;
+        }
+        .headertop__name{
+            margin-left: 14.44px;
+            // height: 43.43px;
+            // width: 154.9px;
+        }
+    }
+    .headertop__menu{
+        flex:6;
+        height: auto;
+        // background-color: chartreuse;
+        margin-left: 10px;
+
+        display: flex;
+        align-items: center;
+        
+        li{
+            // background-color: chocolate;
+            float: left;
+            list-style-type:none ;
+            margin-right: 66.5px;
+            margin-left: 7px;
+            font-family: Roboto;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 21px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $black-text-color-3 ;
+
+            cursor: pointer;
+        }
+        li:hover {
+            color: $cyan-text-color-1;
+        }
+        
+        .headertop__avatar{
+            height: 34px;
+            width: 34px;
+            cursor: pointer;
+            .headertop__img{
+                height: 100%;
+                width: 100%;
+                border-radius: 100%;
+                object-fit: fill;
+            }
+        }
+    }
+    
+}
+
+
+
+
+
+
+

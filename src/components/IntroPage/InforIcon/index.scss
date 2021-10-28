@@ -1,0 +1,22 @@
+@import "assets/scss/variables.scss";
+.intro-inforicon{
+    height: auto;
+    width: 42.6px;
+    transition: 0.5s;
+    .inforicon__imgicon{
+        margin-bottom: 6.03px;
+        .intro-icon{
+            color:$light-blue;
+            cursor: pointer;
+
+
+        }
+    }
+    .inforicon__imgicon:hover {
+        .intro-icon{
+            background: $light-blue;
+            color:$white;
+            transition: 0.8s;
+        }
+    }
+}

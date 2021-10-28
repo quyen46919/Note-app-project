@@ -1,0 +1,15 @@
+@import "assets/scss/variables.scss";
+.intro-icon{
+    height: 48.23px;
+    width: 42.6px;
+    background-color: $white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    .icon__imgicon{
+        z-index: 1;
+       
+    }
+}
