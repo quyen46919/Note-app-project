@@ -1,39 +1,5 @@
 @import "assets/scss/mixins.scss";
 @import "assets/scss/variables.scss";
-<<<<<<< HEAD
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Work+Sans:wght@100;500&family=Zen+Kurenaido&display=swap');
-.intro{
-    height: auto;
-    width: 100%;
-    margin: auto;
-    display: flex;
-    .intro__content{ 
-        z-index: 10;
-        .intro__headertop{
-            margin-top: 19.79px;
-            margin-bottom: 132.75px;
-        }
-        .intro__introduce-img{
-            display: flex;
-            .intro__img{
-                height: 200px;
-                width: 276px;
-                margin-left: -1216px;
-                margin-top: -55px;
-                z-index: -10;
-            }
-        }
-        .intro__feature-tex{
-            font-family: Work Sans;
-            font-size: 48px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 56px;
-            letter-spacing: 0em;
-            text-align: center;
-            color: $black-text-color-4;
-=======
->>>>>>> 81698a58cef903660c2d28e67dc9eae48fcd034e
 
 .intro {
     h1 {
