@@ -1,6 +1,11 @@
+@import 'assets/scss/mixins';
+
 .App {
   text-align: center;
   height: auto;
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
+
+  @include ScrollBarCustom();
 }
