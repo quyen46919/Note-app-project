@@ -1,0 +1,41 @@
+@import 'assets/scss/mixins';
+
+.folder-page {
+    @include padding(23px 34px);
+    @include displayFlex(column, nowrap, flex-start, flex-start);
+    gap: 15px;
+
+    &__list {
+        @include displayFlex(row, wrap, flex-start, flex-start);
+        gap: 42px;
+    }
+
+    &__select {
+        width: 230px;
+
+        & > div {
+            text-align: left;
+        }
+
+        * {
+            border: none!important;
+        }
+    }
+
+    &__menu-item {
+        font-weight: 500!important;
+        font-size: 16px!important;
+        background-color: red;
+    }
+
+    &__filter {
+        width: 100%;
+        @include displayFlex(row, wrap, space-between, center)
+    }
+
+    &__view {
+        display: flex;
+        gap: 10px;
+        cursor: pointer;
+    }
+}
