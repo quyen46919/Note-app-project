@@ -1,0 +1,67 @@
+@import "assets/scss/mixins.scss";
+@import "assets/scss/variables.scss";
+
+.intro-footer__box{
+    height: 60px;
+    width: auto;
+    margin: auto;
+    background-color: $blue;
+
+    
+
+    .intro-footer__container{
+        width: 1440px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .intro-footer__logo-text{
+            width: 700px;
+            display: flex;
+            align-items: center;
+    
+            .intro-footer__iconbtn{
+                height: 20px;
+                width: 20px;
+                margin-left: 137px;
+                margin-right: 20px;
+            }
+        @include maxWidth($lg){
+            .intro-footer__iconbtn{
+                margin-left: 50px;
+            }         
+        }
+            .intro-footer__p{
+                font-family: Work Sans;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: $white;
+            }
+        }
+        .intro-footer__icon{
+            width: 33.33px;
+            display: flex;
+            justify-content: flex-end;
+            .intro-footer__muiten{
+                height: 33.33px;
+                width: 33.33px;
+                margin-right: 137px;
+            }
+        @include maxWidth($lg){
+            .intro-footer__muiten{
+                margin-right: 50px;
+            }        
+        }
+        }
+    }
+    @include maxWidth($xxl){
+        .intro-footer__container{
+            width: 100%;
+        }
+    }
+}

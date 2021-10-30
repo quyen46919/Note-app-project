@@ -1,28 +1,45 @@
 @import "assets/scss/variables.scss";
-.intro-infor{
-    width: calc(1440px - 194px);
+@import "assets/scss/mixins";
+.intro-infor__container{
+    width: auto;
     height: auto;
     margin: auto;
-    // background-color: chocolate;
-
     display: flex;
-    grid-template: row;
-    justify-content: space-between;
-    .infor-informer:hover {
-        .personal__name{
-            color: $blue;
-            transition: 0.8s;
+    justify-content: center;
+    align-items: center;
+    // background-color: chocolate;
+    padding: 0 97px 0 97px;
+    .intro-infor__box{
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        .infor-informer:hover {
+            .personal__name{
+                color: $blue;
+                transition: 0.8s;
+            }
+            .personal__job{
+                color: $cyan-text-color-2;
+                transition: 0.8s;
+            }
         }
-        .personal__job{
-            color: $cyan-text-color-2;
-            transition: 0.8s;
+        
+        .infor-informer:hover {
+            .infor__inforicon{
+                opacity: 1;
+                z-index: 1;
+                transition: 0.8s;
+            }
         }
     }
-    .infor-informer:hover {
-        .infor__inforicon{
-            opacity: 1;
-            z-index: 1;
-            transition: 0.8s;
-        }
+@include maxWidth($xxl){
+    .intro-infor__box{
+        justify-content: center;
+        gap: 50px;
     }
+}    
 }

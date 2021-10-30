@@ -1,35 +1,38 @@
 @import 'assets/scss/variables';
+@import 'assets/scss/mixins';
 // @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Roboto:wght@100&family=Work+Sans:wght@100;500&family=Zen+Kurenaido&display=swap');
 
 .intro-introduce{
-    width: calc(1440px - 145.24px);
-    height: 425.32px;
+    width: auto;
+    height: auto;
     // background-color: chartreuse;
-    margin: auto;
     display: flex;
-    margin-left: 96px;
-    margin-right: 49.24px;
+    padding: 0 0px 0 96px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: -20px;
 
     .introduce__content{
-        width: 548px;
-        height: 100%;
+        width: 500px;
+        height: 425px;
         // background-color: chocolate;
-        float: left;
         z-index: 5;
-        position: relative;
-        .introduce__pen-img{
-            height: 200px;
-            width: 276px;
-            top: -61px;
-            left: 132px;
-            z-index: -10;
-            position: absolute;
-        }
+        
 
         .introduce__image{
             height: 112px;
             width: 548px;
             margin-top: 13px;
+            position: relative;
+            .introduce__pen-img{
+                height: 200px;
+                width: 276px;
+                top: -74px;
+                left: 132px;
+                z-index: -10;
+                position: absolute;
+            }
 
             .introduce__imgcontent{
                 height: 100%;
@@ -110,20 +113,107 @@
 
     }
     .introduce__img{
-        width: 763px;
-        height: 100%;
-        // background-color: cornflowerblue;
-        float: left;
+        width:743px;
+        height:425px;
 
         .introduce__imgcontent{
             height: 100%;
             width: 100%;
         }
     }
+    @include maxWidth($md){
+        .introduce__img{
+            width:500px;
+            height:425px;
+    
+            .introduce__imgcontent{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    
 }
-.intro__imgright img{
-    right: 0;
-    position: absolute;
-    z-index: -10;
-    top: -19.79px;
+@include maxWidth($xxl){
+    .intro-introduce{
+        width: auto;
+        .introduce__content{
+            flex: 2;
+            height: auto;
+            .introduce__image{
+                height: 112px;
+                width: 100%;
+                margin-top: 13px;
+    
+                .introduce__imgcontent{
+                    height: 100%;
+                    width: 100%;
+                    margin-left: -24px;
+                }
+            }
+            .introduce__text{
+                height: 84px;
+                width: 100%;
+            }
+        }
+        .introduce__img{
+            flex: 3;
+            height: auto;
+            .introduce__imgcontent{
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+}
+@include maxWidth($xl){
+    .intro-introduce{
+        width: auto;
+        padding: 0;
+        margin: auto;
+
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+        
+        .introduce__content{
+            width: auto;
+            height: auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .introduce__image{
+                height: 112px;
+                flex: 1;
+                margin-top: 13px;
+    
+                .introduce__imgcontent{
+                    height: 100%;
+                    width: 500px;
+                    margin-left: -24px;
+                }
+            }
+            .introduce__text{
+                height: 84px;
+                width: 500px;
+            }
+            .introduce__bnt-icon{
+                width: auto;
+            }
+        }
+        .introduce__img{
+            flex: 1;
+            height: auto;
+            .introduce__imgcontent{
+                height: 100%;
+                width: 100%;
+                padding-right: 0;
+            }
+        }
+    }
 }

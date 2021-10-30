@@ -3,14 +3,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Work+Sans:wght@100;500&family=Zen+Kurenaido&display=swap');
 .intro{
     height: auto;
-    width: 1440px;
+    width: 100%;
     margin: 0 auto;
-    // margin-right: 98px;
-    // display: flex;
-    // justify-content: center;
-
     position: relative;
-    .intro__content{ 
+    .intro__imgright{
+        position: absolute;
+        top: -19.79px;
+        right: 0; 
+        z-index: -2;
+    }
+
+    .intro__container{
+        margin: auto;
         z-index: 10;
         .intro__headertop{
             margin-top: 19.79px;
@@ -29,7 +33,7 @@
             margin-top: 238.68px;
             margin-bottom: 80px;
         }
-        .intro__member-tex{
+        .intro__member-text{
             font-family: Work Sans;
             font-size: 17px;
             font-style: normal;
@@ -41,7 +45,7 @@
             margin-bottom: 0.09px;
             color: $gray-text-color-1;
         }
-        .intro__aboutus-tex{
+        .intro__aboutus-text{
             //styleName: Headlines;
             font-family: Work Sans;
             font-size: 48px;
@@ -55,7 +59,7 @@
             color: $black-text-color-4;
             margin-bottom: 60px;
         }
-        .intro__someimages-tex{
+        .intro__someimages-text{
             font-family: Roboto;
             font-size: 18px;
             font-style: normal;

@@ -11,6 +11,7 @@ function Introduce() {
             <div className="introduce__content">
                 <div className="introduce__image">
                     <img className="introduce__imgcontent" src={content}/>
+                    <img className="introduce__pen-img" src={penimg}/>
                 </div>
                 <div className="introduce__text">
                     <p>Phần mềm Quản lý ghi chú - trợ lý đắc lực trong công việc.</p>
@@ -32,7 +33,6 @@ function Introduce() {
                         </div>
                     </div>
                 </div>
-                <img className="introduce__pen-img" src={penimg}/>
             </div>
             <div className="introduce__img">
                 <img className="introduce__imgcontent" src={introduceimg}/>

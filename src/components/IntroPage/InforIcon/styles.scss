@@ -3,20 +3,31 @@
     height: auto;
     width: 42.6px;
     transition: 0.5s;
-    .inforicon__imgicon{
+    .intro-inforicon__imgicon{
         margin-bottom: 6.03px;
-        .intro-icon{
+        .intro-inforicon__icon{
             color:$light-blue;
             cursor: pointer;
 
 
         }
+        .intro-inforicon__icon{
+            height: 48.23px;
+            width: 42.6px;
+            background-color: $white;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
     }
-    .inforicon__imgicon:hover {
-        .intro-icon{
+    .intro-inforicon__imgicon:hover {
+        .intro-inforicon__icon{
             background: $light-blue;
             color:$white;
             transition: 0.8s;
         }
     }
+    
 }
