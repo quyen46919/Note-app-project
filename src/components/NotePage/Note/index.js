@@ -6,7 +6,7 @@ import './styles.scss';
 function Note() {
     return (
         <div>
-            <div className="note__background"> 
+            <div className="note__background">
                 <div className="note">
                     <div className="note__header">
                         Không gian làm việc
