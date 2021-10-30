@@ -4,6 +4,7 @@ export const initialNoteData = {
             id: 'board-1',
             lastUpdate: '7/10/2021',
             title: 'Assassination classroom',
+            isFavorited: false,
             columnOrder: ['column-2', 'column-3', 'column-1', 'column-4'],
             columns: [
                 {
@@ -198,6 +199,7 @@ export const initialNoteData = {
             id: 'board-2',
             lastUpdate: '5/10/2021',
             title: 'Material UI v5 Material UI v5Material UI v5Material UI v5Material UI v5Material UI v5Material UI v5',
+            isFavorited: true,
             columnOrder: ['column-2', 'column-3', 'column-1', 'column-4'],
             columns: [
                 {
@@ -399,6 +401,7 @@ export const initialNoteData = {
             id: 'board-3',
             lastUpdate: '2/3/2021',
             title: 'Tiền đi chợ',
+            isFavorited: true,
             columnOrder: ['card-5', 'card-6'],
             columns: [
                 {
@@ -421,6 +424,7 @@ export const initialNoteData = {
             id: 'board-4',
             lastUpdate: '3/9/2021',
             title: 'Đóng tiền học phí',
+            isFavorited: true,
             columnOrder: [],
             columns: []
         },
@@ -428,6 +432,7 @@ export const initialNoteData = {
             id: 'board-5',
             lastUpdate: '15/10/2021',
             title: 'Học NodeJS Express',
+            isFavorited: true,
             columnOrder: [],
             columns: []
         },
@@ -435,6 +440,7 @@ export const initialNoteData = {
             id: 'board-6',
             lastUpdate: '12/10/2021',
             title: 'Học Typescript và NextJS',
+            isFavorited: true,
             columnOrder: [],
             columns: []
         }
