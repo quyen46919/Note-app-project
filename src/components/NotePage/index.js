@@ -1,9 +1,11 @@
 import React from 'react';
+import NoteTable from './NoteTable';
+import './styles.scss';
 
 function NotePage() {
     return (
-        <div>
-            this is note page
+        <div className="note-page">
+            <NoteTable/>
         </div>
     );
 }

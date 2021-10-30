@@ -7,7 +7,7 @@
 5. Tạo branch mới để code -> push code lên github -> sau khi code được review và merge vào master thì delete branch
 
 # Extension
-1. Prettier
+1. Prettier - Format code
 
 ## Các thư viện chính sử dụng trong dự án
 1. react-router-dom
