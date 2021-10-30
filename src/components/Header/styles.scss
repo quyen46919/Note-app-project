@@ -1,6 +1,80 @@
 @import 'assets/scss/variables';
+@import 'assets/scss/mixins';
 .header {
     height: $headerHeigh;
     width: 100%;
-    background-color: aqua;
+    background-color: $white;
+    @include padding(0 45px);
+    @include displayFlex(row, nowrap, space-between, center);
+    border-bottom: 1px solid $light-silver;
+
+    @include maxWidth($md) {
+        @include padding(0);
+    }
+
+    &__left{
+        @include displayFlex(row, nowrap, flex-start, center);
+        gap: 3rem;
+
+        @include maxWidth($lg) {
+            gap: 1rem;
+        }
+    }
+
+    &__menu {
+        display: none;
+
+        @include maxWidth($md) {
+            display: block;
+        }
+    }
+
+    &__links {
+        a {
+            text-decoration: unset;
+            color: unset;
+        }
+        a.active {
+            color: $blue;
+        }
+
+
+        @include displayFlex(row, nowrap, flex-start, center);
+        gap: 1.5rem;
+        font-size: 16px;
+        font-weight: 500;
+        color: lighten($color: $silver-text-color, $amount: 10);
+
+        @include maxWidth($md) {
+            display: none;
+        }
+        @include maxWidth($lg) {
+            gap: 1rem;
+            font-size: 14px;
+        }
+    }
+
+    &__text-field {
+        width: 200px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__right {
+        @include displayFlex(row, nowrap, space-between, center);
+        gap: 1rem;
+
+        @include maxWidth($md) {
+            gap: 0.2rem;
+        }
+    }
+
+    &__tools {
+        @include displayFlex(row, nowrap, space-between, center);
+        gap: 1rem;
+
+        @include maxWidth($md) {
+            display: none;
+        }
+    }
 }
