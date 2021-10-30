@@ -1,25 +1,23 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import './styles.scss';
 import { AccessTime, PresentToAll, WorkOutline } from '@mui/icons-material';
+import Box from '@mui/material/Box';
+import Tab from '@mui/material/Tab';
+import Tabs from '@mui/material/Tabs';
 import { makeStyles } from '@mui/styles';
-import { Button, IconButton } from '@mui/material';
+import PropTypes from 'prop-types';
+import * as React from 'react';
 import FolderPage from '../FolderPage';
+import './styles.scss';
+import { initialNoteData } from 'assets/initialNoteData';
 
 const useStyles = makeStyles({
     icon: {
         minHeight: 48,
-        backGroundColor: 'red',
-    },
+        backGroundColor: 'red'
+    }
 });
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
-
     return (
         <div
             className='vertical-tab__panel'
@@ -41,13 +39,13 @@ function TabPanel(props) {
 TabPanel.propTypes = {
     children: PropTypes.node,
     index: PropTypes.number.isRequired,
-    value: PropTypes.number.isRequired,
+    value: PropTypes.number.isRequired
 };
 
 function a11yProps(index) {
     return {
         id: `vertical-tab-${index}`,
-        'aria-controls': `vertical-tabpanel-${index}`,
+        'aria-controls': `vertical-tabpanel-${index}`
     };
 }
 
@@ -72,24 +70,24 @@ export default function VerticalTabs() {
                 aria-label="Vertical tabs example"
                 sx={{ borderRight: 1, borderColor: 'divider' }}
             >
-                <Tab 
-                    className={`vertical-tab__drawer ${classes.icon}`} 
-                    label="Gần đây" 
-                    icon={<div><AccessTime className={classes.icon} /></div>} 
+                <Tab
+                    className={`vertical-tab__drawer ${classes.icon}`}
+                    label="Gần đây"
+                    icon={<div><AccessTime className={classes.icon} /></div>}
                     {...a11yProps(0)} />
-                <Tab 
-                    className="vertical-tab__drawer" 
+                <Tab
+                    className="vertical-tab__drawer"
                     label="Ghi chú nhỏ"
-                    icon={<div><WorkOutline className={classes.icon} /></div>} 
+                    icon={<div><WorkOutline className={classes.icon} /></div>}
                     {...a11yProps(1)} />
-                <Tab 
-                    className="vertical-tab__drawer" 
-                    label="Nâng cấp" 
-                    icon={<div><PresentToAll className={classes.icon} /></div>} 
+                <Tab
+                    className="vertical-tab__drawer"
+                    label="Nâng cấp"
+                    icon={<div><PresentToAll className={classes.icon} /></div>}
                     {...a11yProps(2)} />
             </Tabs>
             <TabPanel value={value} index={0}>
-                <FolderPage />
+                <FolderPage data={initialNoteData}/>
             </TabPanel>
             <TabPanel value={value} index={1}>
                 Ghi chú nhỏ

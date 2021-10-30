@@ -1,31 +1,36 @@
-import { AccessTime, AccountCircle, FolderSpecial, MoreHoriz } from '@mui/icons-material';
+import { AccessTime, AccountCircle, FolderShared, FolderSpecial, MoreHoriz } from '@mui/icons-material';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles.scss';
 
 function FolderBox(props) {
+    const {data} = props;
+    console.log('từng cái box', data);
     return (
-        <div className="folder-box">
-            <div className="folder-box__more">
-                <MoreHoriz />
-            </div>
-            <div className="folder-box__line">
-                <FolderSpecial className="folder-box__special"/>
-                <div className="folder-box__users">
-                    <AccountCircle className="folder-box__icon"/>
-                    <AccountCircle className="folder-box__icon"/>
-                    <AccountCircle className="folder-box__icon"/>
+        <Link className="folder-box__link" to="/home/note">
+            <div className="folder-box">
+                <div className="folder-box__more">
+                    <MoreHoriz />
+                </div>
+                <div className="folder-box__line">
+                    {data.isFavorited ? <FolderSpecial className="folder-box__special"/> : <FolderShared className="folder-box__shared"/>}
+                    <div className="folder-box__users">
+                        <AccountCircle className="folder-box__icon"/>
+                        <AccountCircle className="folder-box__icon"/>
+                        <AccountCircle className="folder-box__icon"/>
+                    </div>
+                </div>
+                <div className="folder-box__content">
+                    <div className="folder-box__title">
+                        {data.title}
+                    </div>
+                    <div className="folder-box__subtitle">
+                        <AccessTime />
+                        Cập nhật lần cuối vào {data.lastUpdate}
+                    </div>
                 </div>
             </div>
-            <div className="folder-box__content">
-                <div className="folder-box__title">
-                    Công việc cần làm 
-                </div>
-                <div className="folder-box__subtitle">
-                    <AccessTime />
-                    Đã chỉnh sửa lần cuối: 3 ngày trước
-                </div>
-            </div>
-        </div>
+        </Link>
     );
 }
 

@@ -1,0 +1,8 @@
+@import 'assets/scss/variables';
+@import 'assets/scss/mixins';
+
+.home-search-bar {
+    @include displayFlex(row, nowrap, flex-start, flex-start);
+    gap: 30px;
+
+}

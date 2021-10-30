@@ -6,6 +6,8 @@
     min-height: calc(100vh);
 
     &__tab {
+        box-sizing: border-box;
+        padding-top: 20px;
         width: 216px !important;
         text-transform:inherit!important;
         gap: 10px!important;
@@ -54,7 +56,7 @@
         }
     }
 
-    button:first-child{
+    & > button:first-child{
         margin-top: 20px !important;
     }
 
@@ -77,6 +79,11 @@
     &__panel {
         background-color: $silver-background;
         width: 100%;
+
+        & > div {
+            padding: 0!important;
+        }
     }
+    
 }
 
