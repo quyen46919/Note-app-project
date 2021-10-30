@@ -1,0 +1,82 @@
+@import 'assets/scss/variables';
+
+.vertical-tab {
+    width: 100%;
+    height: auto;
+    min-height: calc(100vh);
+
+    &__tab {
+        width: 216px !important;
+        text-transform:inherit!important;
+        gap: 10px!important;
+
+        .Mui-selected {
+            width: 100%;
+            color: $black-text-color-1 !important;
+            background-color: $silver-background!important;
+        }
+
+        // .MuiTabs-flexContainer.MuiTabs-flexContainerVertical {
+        //     // gap: 10px;
+        // }
+    }
+
+    &__drawer {
+        height: 53px!important;
+        text-align: left !important;
+        justify-content: flex-start!important;
+        flex-direction: row!important;
+        padding-left: 26px !important;
+    }
+
+    button {
+        min-height: 48px!important;
+        display: flex;
+        justify-content: flex-start!important;
+        align-items: center !important;
+        gap: 1rem;
+        text-transform: initial!important;
+        svg {
+            padding: 2px;
+            font-size: 17px;
+            color: $white;
+        }
+
+        div {
+            height: 28px;
+            width: 28px;
+            background-color: $yellow;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform: translateY(4px);
+        }
+    }
+
+    button:first-child{
+        margin-top: 20px !important;
+    }
+
+    button:nth-child(2) > div {
+        background-color: $cyan-green!important;
+    }
+
+    button:nth-child(3) > div {
+        background-color: $orange!important;
+    }
+
+    .tab-icon {
+        height: 48px !important;
+    }
+
+    span {
+        background-color: unset!important;
+    }
+
+    &__panel {
+        background-color: $silver-background;
+        width: 100%;
+    }
+}
+

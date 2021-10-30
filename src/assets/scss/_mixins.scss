@@ -2,18 +2,17 @@
 
 // STYLING MIXINS
 
-@mixin InnerPadding($padding: 0){
+@mixin padding($padding){
     box-sizing: border-box;
     padding: $padding;
 }
 
-@mixin DisplayFlex($direc, $wrap, $justy, $align, $gap) {
+@mixin displayFlex($direc, $wrap, $justy, $align) {
     display: flex;
     flex-direction: $direc;
     justify-content: $justy;
     align-items: $align;
     flex-wrap: $wrap;
-    gap: $gap;
 }
 
 @mixin DisplayFlexRowCenter($direc: row, $wrap: nowrap, $justy: center, $align: center, $gap: 1rem) {

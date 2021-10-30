@@ -1,0 +1,78 @@
+@import 'assets/scss/variables';
+@import 'assets/scss/mixins';
+
+.folder-box {
+    width: 255px;
+    height: 145px;
+    border-radius: 8px;
+    background-color: $white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    @include padding(28px 23px 20px 23px);
+    @include displayFlex(column, nowrap, flex-start, flex-start);
+    gap: 20px;
+    position: relative;
+    cursor: pointer;
+
+    &__more {
+        position: absolute;
+        right: 23px;
+        top: 9px;
+        color: $silver-text-color-2;
+    }
+
+    &__line {
+        @include displayFlex(row, nowrap, space-between, center);
+        width: 100%;
+    }
+
+    &__special {
+        font-size: 45px!important;
+        color: $cyan;
+    }
+
+    &__users {
+        transform: translateX(15px);
+    }
+
+    &__icon {
+        font-size: 22px;
+        color: $light-blue-1;
+        background-color: $white;
+        border-radius: 50%;
+    }
+
+    &__icon:nth-child(2) {
+        color: $cyan-blue-1;
+        transform: translateX(-5px);
+    }
+
+    &__icon:nth-child(3) {
+        color: $medium-blue;
+        transform: translateX(-10px);
+    }
+
+    &__content {
+        @include displayFlex(column, nowrap, center, flex-start);
+        height: auto;
+
+    }
+
+    &__title {
+        font-size: 16px;
+        color: $black-text-color-1;
+        font-weight: 500;
+    }
+    
+    &__subtitle {
+        font-size: 11px;
+        color: $silver-text-color-2;
+        font-weight: 500;
+        @include displayFlex(row, nowrap, flex-start, center);
+        gap: 5px;
+
+        svg {
+            font-size: 13px;
+        }
+    }
+    
+}
