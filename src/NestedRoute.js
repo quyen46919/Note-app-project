@@ -13,7 +13,7 @@ function NestedRoute() {
             <Switch>
                 <Route path="/home" component={HomePage} exact/>
                 <Route path="/home/account" component={AccountPage} exact/>
-                <Route path="/home/note" component={NotePage} exact/>
+                <Route path="/home/:noteId" component={NotePage} exact/>
                 <Route component={NotFoundPage} />
             </Switch>
         </div>

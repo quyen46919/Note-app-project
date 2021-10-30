@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 import './styles.scss';
 
 function FolderBox(props) {
-    const {data} = props;
-    console.log('từng cái box', data);
+    const { data } = props;
+
     return (
-        <Link className="folder-box__link" to="/home/note">
+        <Link className="folder-box__link" to={`/home/${data.id}`}>
             <div className="folder-box">
                 <div className="folder-box__more">
                     <MoreHoriz />

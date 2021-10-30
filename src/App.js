@@ -4,6 +4,7 @@ import IntroPage from './components/IntroPage';
 import './App.scss';
 import LoginPage from 'components/LoginPage';
 import RegisterPage from 'components/RegisterPage';
+import NotFoundPage from 'components/NotFoundPage';
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
                     <Route path="/home" component={NestedRoute}/>
                     <Route path="/login" component={LoginPage} exact />
                     <Route path="/register" component={RegisterPage} exact />
+                    <Route component={NotFoundPage} exact />
                 </Switch>
             </BrowserRouter>
         </div>

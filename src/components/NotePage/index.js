@@ -2,10 +2,11 @@ import React from 'react';
 import NoteTable from './NoteTable';
 import './styles.scss';
 
-function NotePage() {
+function NotePage({ match }) {
+
     return (
         <div className="note-page">
-            <NoteTable/>
+            <NoteTable id={match.params.noteId}/>
         </div>
     );
 }
