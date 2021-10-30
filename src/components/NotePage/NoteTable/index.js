@@ -4,6 +4,7 @@ import { Button, Dialog, DialogActions, DialogContent, DialogContentText, Dialog
 import { makeStyles } from '@mui/styles';
 import { initialNoteData } from 'assets/initialNoteData';
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Container, Draggable } from 'react-smooth-dnd';
 import { applyDrag } from 'utils/dragDrop';
 import { mapOrder } from 'utils/sorts';
@@ -26,20 +27,30 @@ const useStyles = makeStyles(() => ({
     }
 }));
 
-function NoteTable() {
+function NoteTable(props) {
+    const { id } = props;
     const classes = useStyles();
     const [board, setBoard] = useState({});
     const [columns, setColumns] = useState([]);
     const [open, setOpen] = useState(false);
     const [newColumnTitle, setNewColumnTitle] = useState('');
     const [showNoti, setShowNoti] = useState(false);
+    let history = useHistory();
+    console.log(id);
 
     useEffect(() => {
-        const boardFromDb = initialNoteData.boards.find(board => board.id === 'board-2') || [];
-        if (boardFromDb) {
+
+        // FAKE CALL API
+        const boardFromDb = initialNoteData.boards.find(board => board.id === id);
+
+        if (!boardFromDb) {
+            history.push('/home');
+            return;
+        } else {
             setBoard(boardFromDb);
             setColumns(mapOrder(boardFromDb.columns, boardFromDb.columnOrder, 'id'));
         }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const onColumnDrop = (dropResult) => {

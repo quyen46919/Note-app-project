@@ -402,21 +402,23 @@ export const initialNoteData = {
             lastUpdate: '2/3/2021',
             title: 'Tiền đi chợ',
             isFavorited: true,
-            columnOrder: ['card-5', 'card-6'],
+            columnOrder: ['column-1', 'column-2'],
             columns: [
                 {
-                    id: 'card-5',
+                    id: 'column-1',
                     boardId: 'board-3',
-                    columnId: 'column-1',
-                    title: 'You should NOT use this codemod if you have already defined default variant: "outlined" in the theme.',
-                    cover: null
+                    isFavorite: false,
+                    title: 'To do column 3',
+                    cardOrder: [],
+                    cards: []
                 },
                 {
-                    id: 'card-6',
+                    id: 'column-2',
                     boardId: 'board-3',
-                    columnId: 'column-1',
-                    title: 'Title of card 6',
-                    cover: null
+                    isFavorite: false,
+                    title: 'To do column 3',
+                    cardOrder: [],
+                    cards: []
                 }
             ]
         },

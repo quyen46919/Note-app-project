@@ -61,7 +61,7 @@ function Header() {
                     LOGO
                 </div>
                 <div className="header__links">
-                    <NavLink to="/home/note" exact>
+                    <NavLink to="/home" exact>
                         Trang chủ
                     </NavLink>
                     <NavLink to="/home/account" exact>
