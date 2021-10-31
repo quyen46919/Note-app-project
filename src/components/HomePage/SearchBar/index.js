@@ -15,16 +15,6 @@ const useStyles = makeStyles({
         padding: 0,
         marginTop: '0px!important'
     },
-    form: {
-        height: '48px',
-        width: '665px',
-        display: 'flex',
-    },
-    button: {
-        backgroundColor: '#18A0FB!important',
-        gap: '0px!important',
-        fontSize: '16px!important'
-    },
     plusIcon: {
         fontSize: '26px!important'
     },
@@ -40,9 +30,9 @@ export default function SearchBar() {
             <Paper
                 component='form'
                 elevation={0}
-                className={`${classes.form} ${classes.boxShadow}`}
+                className={`home-search-bar__form ${classes.boxShadow}`}
             >
-                <IconButton sx={{ p: '10px' }} aria-label='menu'>
+                <IconButton className="home-search-bar__search-icon" aria-label='menu'>
                     <Search className={classes.searchIcon}/>
                 </IconButton>
                 <InputBase
@@ -52,10 +42,9 @@ export default function SearchBar() {
                 />
             </Paper>
             <Button
-                className={`${classes.button} ${classes.boxShadow}`}
-
+                className={`home-search-bar__button ${classes.boxShadow}`}
                 variant="contained"
-                disableElevation="false"
+                disableElevation
                 startIcon={<AddIcon className={classes.plusIcon}/>}
             >
                 Tạo mới

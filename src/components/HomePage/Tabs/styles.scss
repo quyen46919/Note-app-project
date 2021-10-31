@@ -1,9 +1,15 @@
 @import 'assets/scss/variables';
+@import 'assets/scss/mixins';
 
 .vertical-tab {
     width: 100%;
     height: auto;
     min-height: calc(100vh);
+
+    @include maxWidth($lg) {
+        display: flex;
+        flex-direction: column!important;
+    }
 
     &__tab {
         box-sizing: border-box;
@@ -12,15 +18,14 @@
         text-transform:inherit!important;
         gap: 10px!important;
 
+        @include maxWidth($lg) {
+            width: 100%!important;
+        }
+
         .Mui-selected {
-            width: 100%;
             color: $black-text-color-1 !important;
             background-color: $silver-background!important;
         }
-
-        // .MuiTabs-flexContainer.MuiTabs-flexContainerVertical {
-        //     // gap: 10px;
-        // }
     }
 
     &__drawer {
@@ -31,13 +36,18 @@
         padding-left: 26px !important;
     }
 
-    button {
+    button.vertical-tab__drawer {
         min-height: 48px!important;
         display: flex;
         justify-content: flex-start!important;
         align-items: center !important;
         gap: 1rem;
         text-transform: initial!important;
+
+        @include maxWidth($md) {
+            flex-direction: column!important;
+        }
+
         svg {
             padding: 2px;
             font-size: 17px;
@@ -53,6 +63,10 @@
             align-items: center;
             justify-content: center;
             transform: translateY(4px);
+        }
+
+        @include maxWidth($lg) {
+            width: calc(100% /3);
         }
     }
 
@@ -79,6 +93,7 @@
     &__panel {
         background-color: $silver-background;
         width: 100%;
+        min-height: 600px;
 
         & > div {
             padding: 0!important;
@@ -87,3 +102,8 @@
     
 }
 
+@include maxWidth($lg) {
+    .MuiTabs-flexContainer.MuiTabs-flexContainerVertical {
+        flex-direction: row;
+    }
+}
