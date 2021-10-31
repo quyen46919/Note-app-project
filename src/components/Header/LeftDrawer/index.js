@@ -11,6 +11,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
+import logo from 'assets/images/logo.png';
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import './styles.scss';
@@ -35,7 +36,7 @@ export default function LeftDrawer() {
             className="header-drawer"
         >
             <List className="header-drawer__logo">
-                LOGO
+                <img src={logo} style={{ height: '35px' }}/>
             </List>
             <Divider />
             <List>
