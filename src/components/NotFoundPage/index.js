@@ -1,9 +1,11 @@
 import React from 'react';
+import notFound from 'assets/images/404.png';
+import './styles.scss';
 
 function NotFoundPage() {
     return (
-        <div>
-            this is not found page
+        <div className="not-found">
+            <img src={notFound} alt="404 not found image" />
         </div>
     );
 }
