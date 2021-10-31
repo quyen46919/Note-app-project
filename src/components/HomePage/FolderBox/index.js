@@ -1,14 +1,35 @@
-import { AccessTime, AccountCircle, FolderShared, FolderSpecial, MoreHoriz } from '@mui/icons-material';
+import { AccessTime, AccountCircle, FolderShared, FolderSpecial, MoreHoriz, MoreVert } from '@mui/icons-material';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './styles.scss';
 
 function FolderBox(props) {
-    const { data } = props;
+    const { data, isLined } = props;
 
     return (
         <Link className="folder-box__link" to={`/home/${data.id}`}>
-            <div className="folder-box">
+            { isLined ? <div className="folder-row">
+                <div className="folder-row__content">
+                    <div className="folder-row__line">
+                        {data.isFavorited ? <FolderSpecial className="folder-box__special"/> : <FolderShared className="folder-box__shared"/>}
+                    </div>
+                    <div className="folder-row__title">
+                        {data.title}
+                    </div>
+                </div>
+                <div className="folder-row__subtitle">
+                    <AccessTime />
+                    Cập nhật lần cuối vào {data.lastUpdate}
+                </div>
+                <div className="folder-row__users">
+                    <AccountCircle className="folder-row__icon"/>
+                    <AccountCircle className="folder-row__icon"/>
+                    <AccountCircle className="folder-row__icon"/>
+                </div>
+                <div className="folder-row__more-vertical">
+                    <MoreVert />
+                </div>
+            </div> : <div className="folder-box">
                 <div className="folder-box__more">
                     <MoreHoriz />
                 </div>
@@ -29,7 +50,7 @@ function FolderBox(props) {
                         Cập nhật lần cuối vào {data.lastUpdate}
                     </div>
                 </div>
-            </div>
+            </div>}
         </Link>
     );
 }
