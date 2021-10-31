@@ -13,10 +13,14 @@
         background: $light-silver-1;
         @include padding(0 1rem);
         @include displayFlex(row, wrap, space-between, center);
-        font-size: 25px;
+        font-size: 22px;
         font-family: 'Roboto';
         font-weight: 500;
         color: $black-text-color-4;
+
+        @include maxWidth($sm) {
+            padding-bottom: 1rem!important;
+        }
 
         * { margin: 0 }
 
@@ -25,6 +29,10 @@
             overflow: hidden;
             text-overflow: ellipsis;
             max-width: 350px;
+
+            @include maxWidth($sm) {
+                max-width: 100%;
+            }
         }
 
         @include maxWidth(992px){
@@ -50,6 +58,7 @@
     }
     &__content {
         height: calc(100% - #{$noteTableHeaderHeight} - #{$headerHeigh});
+        min-height: 600px;
         width: 100%;
         background: $light-silver-1;
         @include padding(0 1rem);

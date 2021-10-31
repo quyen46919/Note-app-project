@@ -1,6 +1,5 @@
-
-import { Add, CalendarToday, Devices, FilterList, Fullscreen, MoreHoriz } from '@mui/icons-material';
-import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField } from '@mui/material';
+import { Add, Devices, FilterList, Fullscreen, MoreHoriz } from '@mui/icons-material';
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField, Tooltip } from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { initialNoteData } from 'assets/initialNoteData';
 import React, { useEffect, useState } from 'react';
@@ -36,7 +35,6 @@ function NoteTable(props) {
     const [newColumnTitle, setNewColumnTitle] = useState('');
     const [showNoti, setShowNoti] = useState(false);
     let history = useHistory();
-    console.log(id);
 
     useEffect(() => {
 
@@ -208,12 +206,11 @@ function NoteTable(props) {
                     ))}
                 </Container>
                 <div className="note-table__add">
-                    <Button variant="outlined" color="inherit" onClick={openDialog} className="note-table__btn">
-                        <Add fontSize="small"/>
-                    </Button>
-                    <Button variant="outlined" color="primary" className="note-table__btn">
-                        <CalendarToday fontSize="small"/>
-                    </Button>
+                    <Tooltip title="Tạo mới ghi chú">
+                        <Button variant="outlined" color="inherit" onClick={openDialog} className="note-table__btn">
+                            <Add fontSize="small"/>
+                        </Button>
+                    </Tooltip>
                 </div>
             </div>
             {open &&
