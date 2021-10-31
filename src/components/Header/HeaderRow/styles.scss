@@ -9,7 +9,7 @@
     border-bottom: 1px solid $light-silver;
 
     @include maxWidth($md) {
-        @include padding(0);
+        @include padding(0 0.5rem);
     }
 
     &__left{
@@ -19,14 +19,22 @@
         @include maxWidth($lg) {
             gap: 1rem;
         }
+
+        @include maxWidth($xl) {
+            gap: 0rem;
+        }
     }
 
     &__menu {
         display: none;
 
-        @include maxWidth($md) {
+        @include maxWidth($xl) {
             display: block;
         }
+    }
+
+    &__logo {
+        img { height: 35px }
     }
 
     &__links {
@@ -45,7 +53,7 @@
         font-weight: 500;
         color: lighten($color: $silver-text-color, $amount: 10);
 
-        @include maxWidth($md) {
+        @include maxWidth($xl) {
             display: none;
         }
         @include maxWidth($lg) {
