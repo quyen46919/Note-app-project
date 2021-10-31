@@ -19,7 +19,7 @@
 
         .intro-content__boxs{
             height: auto;
-            width: 263px;
+            width: 250px;
             display: flex;
             flex-direction: column;
             .intro-content__title{
@@ -83,11 +83,11 @@
             }
             .intro-content__icon{
                 margin-top: 18px;
-                .intro-inforicon{
+                .intro__infor-icon{
                     display: flex;
                     justify-content: space-between;
 
-                    .intro-inforicon__icon{
+                    .intro__infor-icon__icon{
                         margin-right: 27px;
                         height: 40px;
                         width: 40px;
@@ -125,7 +125,7 @@
     
         .intro-content__boxs{
             height: auto;
-            width: 270px;
+            width: 230px;
             display: flex;
             flex-direction: column;
         }

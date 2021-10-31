@@ -12,21 +12,15 @@ import FadeInWhenVisible from './FadeInWhenVisible';
 function IntroPage() {
     return (
         <div className='intro'>
-            <FadeInWhenVisible>
-                <div className="intro__imgright">
-                    <img src={imgright}/>
-                </div>
-            </FadeInWhenVisible>
+            <div className="intro__imgright">
+                <FadeInWhenVisible><img src={imgright}/></FadeInWhenVisible>
+            </div>
             <div className="intro__container">
                 <FadeInWhenVisible>
                     <div className="intro__headertop"><HeaderTop/></div>
                 </FadeInWhenVisible>
                 <FadeInWhenVisible>
-                    <div className="intro__introduce-img">
-                        <div className="intro__introduce">
-                            <Introduce/>
-                        </div>
-                    </div>
+                    <Introduce/>
                 </FadeInWhenVisible>
                 <FadeInWhenVisible><h1 className="intro__feature-tex">Các tính năng nổi bật</h1></FadeInWhenVisible>
                 <div className="intro__feature"><Feature/></div>

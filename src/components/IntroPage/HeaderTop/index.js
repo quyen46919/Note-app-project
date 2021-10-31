@@ -9,17 +9,20 @@ import 'assets/scss/_variables.scss';
 function HeaderTop() {
     return (
         <div className="intro-headertop">
-            <div className="headertop__logo">
-                <img className="headertop__img" src={logo}/>
-                <img className="headertop__name" src={logoname}/>
+            <div className="intro-headertop__bars">
+                <i className="fas fa-bars"></i>
             </div>
-            <div className="headertop__menu">
+            <div className="intro-headertop__logo">
+                <img className="intro-headertop__img" src={logo}/>
+                <img className="intro-headertop__name" src={logoname}/>
+            </div>
+            <div className="intro-headertop__menu">
                 <li>TÍNH NĂNG</li>
                 <li>CHÍNH SÁCH</li>
                 <li>NHÀ PHÁT TRIỂN</li>
                 <li>LIÊN HỆ</li>
-                <div className="headertop__avatar">
-                    <img className="headertop__img" src={avatar}/>
+                <div className="intro-headertop__avatar">
+                    <img className="intro-headertop__img" src={avatar}/>
                 </div>
             </div>
         </div>

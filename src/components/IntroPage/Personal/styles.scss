@@ -2,7 +2,7 @@
 @import "assets/scss/mixins";
 .intro-personal{
     cursor: pointer;
-    width: 287.54px;
+    width: 277.54px;
     height: 422.05px;
     // background: #d10f0f;
     box-shadow: 0px 1.06496px 10.6496px rgba(0, 0, 0, 0.1);
@@ -10,7 +10,7 @@
 
 
     // background-color: chartreuse;
-    .personal__bacgruond-img{
+    .personal__background-img{
         height: 301.47px;
         width: 100%;
         display: flex;
@@ -23,7 +23,7 @@
 
             float: left;
         }
-        .infor__inforicon{
+        .infor__infor-icon{
             position: absolute;
             top: 34.97px;
             right: 0;
@@ -62,11 +62,11 @@
 @include maxWidth($xxl){
  
     .intro-personal{
-        width: 500px;
-        height: 600px;
+        width: 470px;
+        height: 650px;
         margin: auto;
-        .personal__bacgruond-img{
-            height: 400px;
+        .personal__background-img{
+            height: 500px;
             width: 100%;
             display: flex;
             position: relative;
@@ -78,10 +78,10 @@
 @include maxWidth($xl){
  
     .intro-personal{
-        width: 400px;
+        width: 370px;
         height: 530px;
         margin: auto;
-        .personal__bacgruond-img{
+        .personal__background-img{
             height: 400px;
             width: 100%;
             display: flex;
@@ -94,7 +94,7 @@
 @include maxWidth($lg){
  
     .intro-personal{
-        width: 300px;
+        width: 260px;
         height: 450px;
         margin: auto;
         .personal__bacgruond-img{
@@ -110,7 +110,7 @@
 @include maxWidth($md){
  
     .intro-personal{
-        width: 430px;
+        width: 400px;
         height: 600px;
         margin: auto;
         .personal__bacgruond-img{

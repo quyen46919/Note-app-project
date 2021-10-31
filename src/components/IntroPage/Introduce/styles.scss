@@ -3,29 +3,28 @@
 // @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Roboto:wght@100&family=Work+Sans:wght@100;500&family=Zen+Kurenaido&display=swap');
 
 .intro-introduce{
-    width: auto;
-    height: auto;
-    // background-color: chartreuse;
+    width: 1279px;
+    height: 500px;
+    margin: auto;
+    
+    margin: 0 49.24px 0 96px;
     display: flex;
-    padding: 0 0px 0 96px;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    gap: -20px;
 
-    .introduce__content{
+    .intro-introduce__content{
         width: 500px;
         height: 425px;
-        // background-color: chocolate;
+        // background-color: rgb(105, 56, 20);
         z-index: 5;
         
 
-        .introduce__image{
+        .intro-introduce__image{
+            // background-color: brown;
             height: 112px;
             width: 548px;
             margin-top: 13px;
             position: relative;
-            .introduce__pen-img{
+            margin-bottom: 65px;
+            .intro-introduce__pen-img{
                 height: 200px;
                 width: 276px;
                 top: -74px;
@@ -34,13 +33,13 @@
                 position: absolute;
             }
 
-            .introduce__imgcontent{
+            .intro-introduce__img-content{
                 height: 100%;
                 width: 100%;
                 margin-left: -24px;
             }
         }
-        .introduce__text{
+        .intro-introduce__text{
             height: 84px;
             width: 488px;
             // background-color: darkcyan;
@@ -55,7 +54,7 @@
                 text-align: left;
             }
         }
-        .introduce__bnt-icon{
+        .intro-introduce__bnt-icon{
             height: 64.34px;
             width: 100%;
             margin-top: 55.34px;
@@ -63,12 +62,12 @@
             display: flex;
             align-items: center;
 
-            .introduce__button{
+            .intro-introduce__button{
                 height: 61px;
                 width: 244px;
                 // background-color: darkgreen;
 
-                .introduce__btn{
+                .intro-introduce__btn{
                     height: 100%;
                     width: 100%;
                     border-radius: 5px;
@@ -83,20 +82,20 @@
                     line-height: 23px;
                 }
             }
-            .introduce__icon{
+            .intro-introduce__icon{
                 height: 100%;
                 width: 180px;
                 // background-color: darkmagenta;
                 margin-left: 32px;
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
                 margin-top: 5px;
                 display: flex;
-                .introduce__box-icon{
+                .intro-introduce__box-icon{
                     height: 42px;
                     width: 42px;
                     // background-color: yellow;
-                    margin-left: 14px;
                     border-radius: 50%;
                     cursor: pointer;
                     border: 2px solid black;
@@ -108,25 +107,80 @@
                     }
                 }
             }
+        @include maxWidth($xxl){
+            .intro-introduce__button{
+                height: 61px;
+                width: 200px;
+                // background-color: darkgreen;
+
+                .intro-introduce__btn{
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 5px;
+                    background: #18A0FB;
+                    color: $white;
+                    text-transform: none;
+
+                    font-family: Roboto;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 23px;
+                }
+            }
         }
-
-
+        }
+    @include maxWidth($xl){
+        width: 100%;
+        width: auto;
+        .intro-introduce__bnt-icon{
+            flex-direction: column;
+            .introduce__button{
+                height: 61px;
+                width: 100%;
+                // background-color: darkgreen;
+            }
+            .intro-introduce__icon{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin: 0;
+                margin-top: 30px;
+                display: flex;
+                
+            }
+        }
     }
-    .introduce__img{
-        width:743px;
+    }
+
+    
+    .intro-introduce__img{
+        width:753px;
         height:425px;
 
-        .introduce__imgcontent{
+        .intro-introduce__img-content{
             height: 100%;
             width: 100%;
         }
     }
+@include maxWidth($xl){
+    .intro-introduce__img{
+        width:60% !important;
+        height:425px;
+
+        .intro-introduce__img-content{
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
     @include maxWidth($md){
-        .introduce__img{
+        .intro-introduce__img{
+            flex: 50;
             width:500px;
             height:425px;
     
-            .introduce__imgcontent{
+            .intro-introduce__img-content{
                 height: 100%;
                 width: 100%;
             }
@@ -137,83 +191,88 @@
 @include maxWidth($xxl){
     .intro-introduce{
         width: auto;
-        .introduce__content{
-            flex: 2;
+        display: flex;
+        .intro-introduce__content{
+            width: 40%;;
             height: auto;
-            .introduce__image{
-                height: 112px;
+            .intro-introduce__image{
+                height: auto;
                 width: 100%;
                 margin-top: 13px;
     
-                .introduce__imgcontent{
+                .intro-introduce__img-content{
                     height: 100%;
                     width: 100%;
                     margin-left: -24px;
                 }
             }
-            .introduce__text{
+            .intro-introduce__text{
                 height: 84px;
                 width: 100%;
             }
         }
-        .introduce__img{
-            flex: 3;
+        .intro-introduce__img{
+            width: 60%;;
             height: auto;
-            .introduce__imgcontent{
-                height: 100%;
+            .intro-introduce__img-content{
+                height: auto;
                 width: 100%;
             }
         }
     }
 }
-@include maxWidth($xl){
+@include maxWidth($lg){
     .intro-introduce{
         width: auto;
-        padding: 0;
-        margin: auto;
-
-        
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         gap: 80px;
-        
-        .introduce__content{
-            width: auto;
+        margin: 0;
+        margin-bottom: 400px;
+        .intro-introduce__content{
+            width: 500px;;
             height: auto;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            .introduce__image{
-                height: 112px;
-                flex: 1;
+            .intro-introduce__image{
+                height: auto;
+                width: 100%;
                 margin-top: 13px;
     
-                .introduce__imgcontent{
+                .intro-introduce__img-content{
                     height: 100%;
-                    width: 500px;
+                    width: 100%;
                     margin-left: -24px;
                 }
             }
-            .introduce__text{
+            .intro-introduce__text{
                 height: 84px;
-                width: 500px;
-            }
-            .introduce__bnt-icon{
-                width: auto;
-            }
-        }
-        .introduce__img{
-            flex: 1;
-            height: auto;
-            .introduce__imgcontent{
-                height: 100%;
                 width: 100%;
-                padding-right: 0;
             }
         }
+        .intro-introduce__img{
+            width: 500px;;
+            height: auto;
+            .intro-introduce__img-content{
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+}
+@include maxWidth($md){
+    .intro-introduce{
+        width: auto;
+        height: 900px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 100px;
+        overflow: hidden;
+        .intro-introduce__content{
+            width: 500px;
+            height: auto;
+        }
+
+        margin-bottom: 400px;
     }
 }

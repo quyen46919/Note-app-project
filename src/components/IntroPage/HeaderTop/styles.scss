@@ -5,20 +5,22 @@
 
 .intro-headertop{
     height: auto;
-    width: 1440px;
+    width: 1320px;
     // background-color: aqua;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    // margin-right: 98px;
+    margin-right: 98px;
     // flex-direction: column;
     z-index: 10;
-    // gap: 100px;
-    // gap: 30px;
+    .intro-headertop__bars{
+        display: none;
+        cursor: pointer;
+    }
 
-    .headertop__logo{
+    .intro-headertop__logo{
         width: 160px;
         height: 64px;
         cursor: pointer;    
@@ -29,19 +31,27 @@
         padding-left: 98px;
         // margin-bottom: 30px;
 
-        .headertop__img{
-            height: 42.46px;
-            width: 42.46px;
+        .intro-headertop__logo{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            justify-content: space-between;
+
+            .intro-headertop__img{
+                height: 42.46px;
+                width: 42.46px;
+            }
+            
         }
+
     }
-    .headertop__menu{
+    .intro-headertop__menu{
         width: 670px;
         height: 34px;
         // background-color: chartreuse;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding-right: 98px;
 
         
         li{
@@ -56,50 +66,70 @@
             color: $black-text-color-3 ;
             cursor: pointer;
         }
+    .intro-headertop__avatar{
+        height: 34px;
+        width: 34px;
+        cursor: pointer;
+        .intro-headertop__img{
+            height: 100%;
+            width: 100%;
+            border-radius: 100%;
+            object-fit: fill;
+        }
+        }
+    @include maxWidth($xl){
+        li{
+            font-size: 16px;
+        }
+    }
         li:hover {
             color: $cyan-text-color-1;
         }
-        
-        .headertop__avatar{
-            height: 34px;
+    }
+@include maxWidth($xl){
+    .intro-headertop__menu{
+        padding-right: 50px;
+        // padding-left: 98px;
+        width: 60%;
+    }
+}
+}
+@include maxWidth($md){
+    .intro-headertop{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .intro-headertop__bars{
+            display: flex !important;
+            padding-left: 30px;
+            .fas{
+                font-size: 50px;
+                color: $blue;
+            }
+        }
+        .intro-headertop__menu{
             width: 34px;
-            cursor: pointer;
-            .headertop__img{
-                height: 100%;
-                width: 100%;
-                border-radius: 100%;
-                object-fit: fill;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 50px;
+
+            li{
+                display: none;
             }
         }
     }
-@include maxWidth($xl){
-    .headertop__menu{
-        padding-right: 30px;
-        padding-left: 98px;
-        width: 100%;
-    }
-}
-@include maxWidth($md){
-    .headertop__logo{
-            padding-left: 20px !important;  
-        }
-    .headertop__menu{
-        width: 1000px;
-        height: 34px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    
-}
 }
 @include maxWidth($xxl){
     .intro-headertop{
         width: 100%;
+        .intro-headertop__bars{
+            display: none;
+        }
     }
 }
+
+
 
 
 

@@ -6,6 +6,9 @@
     width: 100%;
     margin: 0 auto;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .intro__imgright{
         position: absolute;
         top: -19.79px;

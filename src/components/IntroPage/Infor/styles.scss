@@ -29,7 +29,7 @@
         }
         
         .infor-informer:hover {
-            .infor__inforicon{
+            .infor__infor-icon{
                 opacity: 1;
                 z-index: 1;
                 transition: 0.8s;
@@ -41,5 +41,11 @@
         justify-content: center;
         gap: 50px;
     }
-}    
+}   
+  
+}
+@include maxWidth($sm){
+    .intro-infor__container{
+        padding: 0;
+    }
 }
