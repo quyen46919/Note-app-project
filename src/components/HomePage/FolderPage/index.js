@@ -16,7 +16,6 @@ function FolderPage(props) {
                 <FormControl variant="standard" sx={{ m: 1, minWidth: 120 }}>
                     <Select
                         className="folder-page__select"
-                        InputLabelProps={{shrink: false}}
                         labelId="demo-simple-select-standard-label"
                         id="demo-simple-select-standard"
                         value={10}
@@ -35,14 +34,6 @@ function FolderPage(props) {
                 {data.boards.map(item => (
                     <FolderBox key={item.id} data={item}/>
                 ))}
-                {/* <FolderBox />
-                <FolderBox />
-                <FolderBox />
-                <FolderBox />
-                <FolderBox />
-                <FolderBox />
-                <FolderBox />
-                <FolderBox /> */}
             </div>
         </div>
     );
