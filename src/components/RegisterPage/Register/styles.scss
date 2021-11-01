@@ -1,3 +1,24 @@
+// @import "assets/scss/_variables.scss";
+// @import "assets/scss/_mixins.scss";
+// .Register--page {
+//     height: 100%;
+//     padding: 0;
+//     margin: 0;
+//     box-sizing: border-box;
+//     width: 100vw;
+//     background-color: $color-page-login;
+//     @include DisplayFlexColumnCenter();
+//     gap: 0 !important;
+//     grid-gap: 0 !important;
+//     overflow: auto;
+// }
+// .Register--form {
+//     height: 973px;
+//     width: 901px;
+//     background-color: $white;
+//     @include DisplayFlexColumnCenter($justy: flex-start);
+//     padding-top: 25px;
+// }
 @import "assets/scss/_variables.scss";
 @import "assets/scss/_mixins.scss";
 .Register--page {
@@ -16,6 +37,21 @@
     height: 973px;
     width: 901px;
     background-color: $white;
+    overflow: hidden;
     @include DisplayFlexColumnCenter($justy: flex-start);
     padding-top: 25px;
+    @include maxWidth($lg) {
+        width: 721px;
+        transition: 0.25s;
+        padding-top: 20px;
+    }
+
+    @include maxWidth($md) {
+        width: 577px;
+        padding-top: 16px;
+    }
+    @include maxWidth($sm) {
+        width: 461.5px;
+        margin-bottom: 13px;
+    }
 }

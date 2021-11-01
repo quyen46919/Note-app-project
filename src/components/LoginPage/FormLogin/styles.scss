@@ -11,26 +11,38 @@
     padding: 16px, 24px, 16px, 24px;
     @include maxWidth($lg) {
         width: 460px;
-        max-height: 46px !important;
+        height: 46.5px;
         transition: 0.25s;
-        margin-top: 16px;
+        margin-top: 16px !important;
     }
     @include maxWidth($md) {
-        max-height: 37px;
+        height: 37px;
         width: 368px;
-        margin-top: 13px;
+        margin-top: 13px !important;
     }
     @include maxWidth($sm) {
-        max-height: 30px !important;
+        height: 29.5px;
         width: 294.5px;
-        margin-top: 10px;
+        margin-top: 10px !important;
+    }
+    input#margin-normal {
+        padding: 16.5px 14px;
+        @include maxWidth($lg) {
+            padding: 13px 11px;
+        }
+        @include maxWidth($md) {
+            padding: 8px 9px;
+        }
+        @include maxWidth($sm) {
+            padding: 6px 7px;
+        }
     }
 }
 .Login-form__button {
     height: 58px;
     width: 575px;
     left: 0px;
-    margin-top: 17px !important;
+    margin-top: 25px !important;
     border-radius: 5px;
     background-color: $blue !important;
     padding: 0;
@@ -43,19 +55,19 @@
         width: 460px;
         max-height: 46px !important;
         transition: 0.25s;
-        margin-top: 13.5px;
+        margin-top: 13.5px !important;
         font-size: 16px !important;
     }
     @include maxWidth($md) {
         height: 37px;
         width: 368px;
-        margin-top: 11px;
+        margin-top: 5px !important;
         font-size: 13px !important;
     }
     @include maxWidth($sm) {
         height: 30px;
         width: 294.5px;
-        margin-top: 10px !important;
+        margin-top: 8px !important;
         font-size: 10px !important;
     }
 }
@@ -204,6 +216,8 @@
         height: 25px;
         width: 294.5px;
         margin-top: -2px;
+        // font-size: 3px;
+        margin-bottom: 10px;
     }
 }
 .Login-form__sym {
@@ -218,7 +232,8 @@
         bottom: -11px;
     }
     @include maxWidth($sm) {
-        bottom: -13px;
+        bottom: -10px;
+        z-index: 1;
     }
 }
 .Login-form__string {
@@ -253,8 +268,10 @@
         padding-right: 16px;
     }
     @include maxWidth($sm) {
-        height: 10px;
+        height: 15px;
         padding-left: 13px;
         padding-right: 13px;
+        font-size: 10px;
+        bottom: -6px;
     }
 }

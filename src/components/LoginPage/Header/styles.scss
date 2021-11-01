@@ -7,6 +7,7 @@
     @include DisplayFlexRowCenter($justy: space-between, $align: flex-end);
     margin-bottom: 25px;
     @include maxWidth($lg) {
+        height: 81px;
         width: 721px;
         transition: 0.25s;
         margin-bottom: 20px;
@@ -14,9 +15,11 @@
     }
     @include maxWidth($md) {
         width: 577px;
+        height: 65px;
         margin-bottom: 16px;
     }
     @include maxWidth($sm) {
+        height: 52px;
         width: 461.5px;
         margin-bottom: 13px;
     }

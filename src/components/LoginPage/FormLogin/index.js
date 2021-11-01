@@ -3,6 +3,14 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import './styles.scss';
+import { useForm } from 'react-hook-form';
+// import { yupResolver } from '@hookform/resolvers/yup';
+// import * as yup from "yup";
+
+// const schema = yup.object({
+//     firstName: yup.string().required(),
+//     age: yup.number().positive().integer().required()
+// }).required();
 
 
 function RedBar() {
@@ -12,18 +20,20 @@ function RedBar() {
 }
 
 export default function FormLogin() {
+    // const { register, handleSubmit, formState: { errors } } = useForm({ resolver: yupResolver(schema) });
+    // const onSubmit = data => console.log(data);
     return (
-        <Box>
-            <RedBar />
-            <TextField className="Login-form__input" type="text" id="margin-normal" margin="normal" placeholder="Email" />
-            <RedBar />
-            <TextField className="Login-form__input" type="password" id="margin-normal" margin="normal" placeholder="Password"/>
-            <RedBar />
-            <div>
+        <Box >
+            <form action="" >
+                <RedBar />
+                <TextField className="Login-form__input" type="text" id="margin-normal" margin="normal" placeholder="Email" />
+                <RedBar />
+                <TextField className="Login-form__input" type="password" id="margin-normal" margin="normal" placeholder="Password" />
+                <RedBar />
                 <Button className="Login-form__button" variant="contained" size="large" disableElevation>
                     Đăng Nhập
                 </Button>
-            </div>
+            </form>
             <div className="Login-form__bottom">
                 <div className="Login-form__bottom--link">
                     <a href="">Quên mật khẩu?</a>
