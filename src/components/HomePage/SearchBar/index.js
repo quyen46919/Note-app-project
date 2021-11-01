@@ -23,7 +23,8 @@ const useStyles = makeStyles({
     }
 });
 
-export default function SearchBar() {
+export default function SearchBar(props) {
+    const { handleFilterTextChange, filterText, handleButtonClick } = props;
     const classes = useStyles();
     return (
         <div className="home-search-bar">
@@ -39,12 +40,15 @@ export default function SearchBar() {
                     sx={{ ml: 1, flex: 1 }}
                     placeholder='Tìm kiếm'
                     inputProps={{ 'aria-label': 'search google maps' }}
+                    onChange={handleFilterTextChange}
+                    value={filterText}
                 />
             </Paper>
             <Button
                 className={`home-search-bar__button ${classes.boxShadow}`}
                 variant="contained"
                 disableElevation
+                onClick={handleButtonClick}
                 startIcon={<AddIcon className={classes.plusIcon}/>}
             >
                 Tạo mới
