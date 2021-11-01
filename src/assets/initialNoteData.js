@@ -401,7 +401,7 @@ export const initialNoteData = {
             id: 'board-3',
             lastUpdate: '2/3/2021',
             title: 'Tiền đi chợ',
-            isFavorited: true,
+            isFavorited: false,
             columnOrder: ['column-1', 'column-2'],
             columns: [
                 {

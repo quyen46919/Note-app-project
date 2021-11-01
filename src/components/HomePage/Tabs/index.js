@@ -8,6 +8,7 @@ import * as React from 'react';
 import FolderPage from '../FolderPage';
 import './styles.scss';
 import { initialNoteData } from 'assets/initialNoteData';
+import EmptyPage from 'components/EmptyPage';
 
 const useStyles = makeStyles({
     icon: {
@@ -90,10 +91,10 @@ export default function VerticalTabs() {
                 <FolderPage data={initialNoteData}/>
             </TabPanel>
             <TabPanel value={value} index={1}>
-                Ghi chú nhỏ
+                <EmptyPage />
             </TabPanel>
             <TabPanel value={value} index={2}>
-                Nâng cấp
+                <EmptyPage />
             </TabPanel>
         </Box>
     );
