@@ -1,0 +1,147 @@
+@import "assets/scss/_variables.scss";
+@import "assets/scss/_mixins.scss";
+.Register-form--header {
+    // height: 101px;
+    // width: 901px;
+    // margin-bottom: 25px;
+    // @include DisplayFlexRowCenter($justy: space-between);
+    // &__left {
+    //     width: 251px;
+    //     height: 70.43px;
+    //     @include DisplayFlexRowCenter($justy: space-between);
+    //     cursor: pointer;
+    //     &_image {
+    //         height: 69px;
+    //         width: 69px;
+    //     }
+    // }
+    // &__right {
+    //     height: 24px;
+    //     width: 350px;
+    //     @include DisplayFlexRowCenter($justy: space-between);
+    //     &_link {
+    //         width: calc(350px / 2);
+    //         a {
+    //             text-decoration: none;
+    //             font-family: Roboto;
+    //             font-size: 20px;
+    //             font-style: normal;
+    //             font-weight: 400;
+    //             line-height: 23px;
+    //             letter-spacing: 0em;
+    //             color: $color-link-2;
+    //         }
+    //         a:hover {
+    //             text-decoration: underline;
+    //         }
+    //     }
+    //     &_language {
+    //         height: 100%;
+    //         width: calc(350px / 2);
+    //         // background-color: red;
+    //         border-right: 1px solid #999999;
+    //         .fas {
+    //             font-size: 20px;
+    //         }
+    //         @include DisplayFlexRowCenter();
+    //         select {
+    //             width: 130px;
+    //             font-family: Roboto;
+    //             font-size: 20px;
+    //             font-style: normal;
+    //             font-weight: 500;
+    //             line-height: 23px;
+    //             letter-spacing: 0em;
+    //             text-align: left;
+    //             outline: none;
+    //             border: none;
+    //             color: $color-lang;
+    //             background-color: $color-page-login;
+    //             cursor: pointer;
+    //             margin-right: 10px;
+    //         }
+    //     }
+    // }
+    height: 101px;
+    width: 901px;
+    // background-color: $dark-green;
+    @include DisplayFlexRowCenter($justy: space-between, $align: flex-end);
+    margin-bottom: 25px;
+    &__left {
+        // background-color: $cyan-green !important;
+        width: 251px;
+        height: 70.43px;
+        @include DisplayFlexRowCenter($justy: space-between);
+
+        cursor: pointer;
+        &_image {
+            height: 69px;
+            width: 69px;
+        }
+    }
+
+    &__right {
+        // background-color: $blue;
+        height: 24px;
+        width: 350px;
+        @include DisplayFlexRowCenter($justy: space-between);
+        // justify: space-between;
+        &_link {
+            width: calc(350px / 2);
+            a {
+                text-decoration: none;
+                font-family: Roboto;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 23px;
+                letter-spacing: 0em;
+                color: $color-link-2;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+        &_language {
+            height: 100%;
+            width: calc(350px / 2);
+            // background-color: red;
+            border-right: 1px solid #999999;
+            .fas {
+                font-size: 20px;
+            }
+            @include DisplayFlexRowCenter();
+            select {
+                width: 130px;
+                font-family: Roboto;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 23px;
+                letter-spacing: 0em;
+                text-align: left;
+                outline: none;
+                border: none;
+                color: $color-lang;
+                background-color: $color-page-login;
+                cursor: pointer;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+.Register-form--title {
+    @include DisplayFlexColumnCenter();
+    // text-align: center;
+    background-color: $blue;
+    width: 901px;
+    margin-top: 24px;
+    height: 58px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    color: $white;
+    border-radius: 5px 5px 0px 0px;
+}

@@ -35,14 +35,12 @@ export default function Header() {
                         </select>
                     </div>
                     <div className="Login-form--header__right_link">
-                        <a href="">Đi đến đăng ký</a>
+                        <a href="http://localhost:3000/register">Đi đến đăng ký</a>
                     </div>
                 </div>
             </div>
-            <div>
-                <Button className="Login-form__button--header" variant="contained" size="large">
-                    Login by Email
-                </Button>
+            <div className="Login-form--title">
+                    Đăng nhập bằng Email
             </div>
         </Box>
     );

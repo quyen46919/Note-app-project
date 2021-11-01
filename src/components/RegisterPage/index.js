@@ -1,6 +1,6 @@
 import React from 'react';
 // import FormRegister from './Login/FormRegister';
-import Register from './Login/Register';
+import Register from './Register';
 import './styles.scss';
 
 function RegisterPage() {
