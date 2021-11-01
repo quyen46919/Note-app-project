@@ -1,22 +1,16 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 // import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
 import './styles.scss';
 import logo from 'assets/images/logo.png'; // with import
 import nottable from 'assets/images/Nottable.png';
 // import IntroPage from 'components/IntroPage';
 
-function pageHome() {
-    return (
-        console.log('object')
-    );
-}
 export default function Header() {
     return (
         <Box>
             <div className="Login-form--header">
-                <div className="Login-form--header__left" onClick={pageHome}>
+                <div className="Login-form--header__left">
                     <div className="Login-form--header__left_image">
                         <img src={logo} alt="logo" />
                     </div>
