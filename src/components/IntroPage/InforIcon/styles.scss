@@ -1,0 +1,33 @@
+@import "assets/scss/variables.scss";
+.intro__infor-icon{
+    height: auto;
+    width: 42.6px;
+    transition: 0.5s;
+    .intro__infor-icon__img-icon{
+        margin-bottom: 6.03px;
+        .intro__infor-icon__icon{
+            color:$light-blue;
+            cursor: pointer;
+
+
+        }
+        .intro__infor-icon__icon{
+            height: 48.23px;
+            width: 42.6px;
+            background-color: $white;
+        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+    }
+    .intro__infor-icon__img-icon:hover {
+        .intro__infor-icon__icon{
+            background: $light-blue;
+            color:$white;
+            transition: 0.8s;
+        }
+    }
+    
+}

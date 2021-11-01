@@ -1,0 +1,95 @@
+@import 'assets/scss/variables';
+@import 'assets/scss/mixins';
+
+.intro-headertop{
+    height: 70px;
+    width: 100%;
+    @include displayFlex(row, wrap, space-between, center);
+    @include padding(0 5rem);
+    margin-bottom: 3rem;
+
+    @include maxWidth($lg) {
+        @include padding(0 1rem);
+        margin-bottom: 1rem;
+    }
+    @include maxWidth($smallPhone) {
+        @include padding(0);
+    }
+
+    .intro-headertop__bars{
+        display: none;
+        cursor: pointer;
+
+        @include maxWidth($lg) {
+            width: 50px;
+            @include displayFlex(row, wrap, center, center);
+        }
+    }
+
+    .intro-headertop__logo{
+        height: 60%;
+
+        img {
+            height: 100%;
+            cursor: pointer;
+        }
+    }
+
+    &__right {
+        @include displayFlex(row, wrap, space-between, center);
+        gap: 3rem;
+    }
+
+    .intro-headertop__menu{
+        width: auto;
+        height: 100%;
+        @include displayFlex(row, wrap, space-between, center);
+        gap: 3rem;
+
+        @include maxWidth($lg) {
+            display: none;
+        }
+
+        a {
+            list-style-type:none ;
+            font-family: Roboto;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 21px;
+            letter-spacing: 0em;
+            color: $black-text-color-3 ;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: $cyan-text-color-1;
+        }
+    }
+
+    &__avatar{
+        height: 34px;
+        width: 34px;
+        cursor: pointer;
+        .intro-headertop__img{
+            height: 100%;
+            width: 100%;
+            border-radius: 100%;
+            object-fit: fill;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
