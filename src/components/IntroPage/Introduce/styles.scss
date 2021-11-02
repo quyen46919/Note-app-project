@@ -129,8 +129,12 @@
                     align-items: center;
 
                     .fab{
-                        font-size: 22px;
+                        font-size: 20px;
                         @include displayFlex(row, wrap, center, center);
+
+                        @include maxWidth($md) {
+                            font-size: 11px;
+                        }
                     }
                 }
             }

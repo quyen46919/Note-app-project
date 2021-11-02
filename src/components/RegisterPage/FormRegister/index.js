@@ -72,7 +72,8 @@ export default function FormRegister() {
                         id="input_form"
                         margin="normal" />
                     <TextField className="Register-form__input"
-                        type="password" placeholder="Số điện thoại"
+                        type="text"
+                        placeholder="Số điện thoại"
                         name='phoneNumber'
                         value={formik.values.phoneNumber}
                         error={Boolean(formik.touched.phoneNumber && formik.errors.phoneNumber)}

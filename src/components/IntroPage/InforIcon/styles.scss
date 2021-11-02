@@ -1,7 +1,9 @@
 @import "assets/scss/variables.scss";
+@import "assets/scss/mixins";
 .intro__infor-icon{
     height: auto;
     width: 42.6px;
+    font-size: 12px!important;
     transition: 0.5s;
     .intro__infor-icon__img-icon{
         margin-bottom: 6.03px;
@@ -9,17 +11,13 @@
             color:$light-blue;
             cursor: pointer;
 
-
         }
         .intro__infor-icon__icon{
             height: 48.23px;
             width: 42.6px;
             background-color: $white;
-        
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
+
+            @include displayFlex(row, wrap, center, center);
         }
     }
     .intro__infor-icon__img-icon:hover {
@@ -28,6 +26,11 @@
             color:$white;
             transition: 0.8s;
         }
+    }
+
+    .fab {
+        font-size: 20px!important;   
+        @include displayFlex(row, wrap, center, center);
     }
     
 }
