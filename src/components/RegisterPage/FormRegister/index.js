@@ -44,7 +44,7 @@ export default function FormRegister(props) {
                 <form onSubmit={formik.handleSubmit}>
                     <TextField className="Register-form__input"
                         type="text" placeholder="Email"
-                        // id="margin-normal"
+                        id="input_form"
                         name='email'
                         value={formik.values.email}
                         error={Boolean(formik.touched.email && formik.errors.email)}
@@ -60,7 +60,7 @@ export default function FormRegister(props) {
                         helperText={formik.touched.pass && formik.errors.pass}
                         onBlur={formik.handleBlur}
                         onChange={formik.handleChange}
-                        // id="margin-normal"
+                        id="input_form"
                         margin="normal" />
                     <TextField className="Register-form__input"
                         type="password" placeholder="Nhập lại mật khẩu"
@@ -70,7 +70,7 @@ export default function FormRegister(props) {
                         helperText={formik.touched.passConfirm && formik.errors.passConfirm}
                         onBlur={formik.handleBlur}
                         onChange={formik.handleChange}
-                        // id="margin-normal"
+                        id="input_form"
                         margin="normal" />
                     <TextField className="Register-form__input"
                         type="password" placeholder="Số điện thoại"
@@ -80,7 +80,7 @@ export default function FormRegister(props) {
                         helperText={formik.touched.phoneNumber && formik.errors.phoneNumber}
                         onBlur={formik.handleBlur}
                         onChange={formik.handleChange}
-                        // id="margin-normal"
+                        id="input_form"
                         margin="normal" />
                     <div className="Register-form__checkbox">
                         <input type="checkbox"

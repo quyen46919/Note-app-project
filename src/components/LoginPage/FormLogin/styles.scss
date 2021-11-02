@@ -2,30 +2,35 @@
 @import "assets/scss/_mixins.scss";
 .Login-form__input {
     // background-color: $blue !important ;
-    height: 58px;
-    width: 575px;
+    // height: 4.1vh;
+    width: 41vw;
     left: 0px;
     // top: 96px;
     margin-top: 20px !important;
     border-radius: 5px;
-    padding: 16px, 24px, 16px, 24px;
+    // padding: 10px, 24px, 10px, 24px;
     @include maxWidth($lg) {
-        width: 460px;
-        height: 46.5px;
+        // width: 460px;
+        height: 40.5px;
         transition: 0.25s;
-        margin-top: 16px !important;
+        margin-top: 10px !important;
+        margin-bottom: 20px !important;
     }
     @include maxWidth($md) {
         height: 37px;
-        width: 368px;
+        // width: 368px;
         margin-top: 13px !important;
     }
     @include maxWidth($sm) {
         height: 29.5px;
-        width: 294.5px;
+        // width: 294.5px;
         margin-top: 10px !important;
     }
-    input#margin-normal {
+    @include maxWidth($smallPhone) {
+        margin-top: 0 !important;
+        margin-bottom: 10px !important;
+    }
+    input#input_form {
         padding: 16.5px 14px;
         @include maxWidth($lg) {
             padding: 13px 11px;
@@ -36,11 +41,15 @@
         @include maxWidth($sm) {
             padding: 6px 7px;
         }
+        @include maxWidth($smallPhone) {
+            padding: 5px 6px;
+            font-size: 10px;
+        }
     }
 }
 .Login-form__button {
     height: 58px;
-    width: 575px;
+    width: 41vw;
     left: 0px;
     margin-top: 25px !important;
     border-radius: 5px;
@@ -52,7 +61,7 @@
     font-size: 20px !important;
     line-height: 28px;
     @include maxWidth($lg) {
-        width: 460px;
+        // width: 460px;
         max-height: 46px !important;
         transition: 0.25s;
         margin-top: 13.5px !important;
@@ -60,38 +69,51 @@
     }
     @include maxWidth($md) {
         height: 37px;
-        width: 368px;
+        // width: 368px;
         margin-top: 5px !important;
         font-size: 13px !important;
     }
     @include maxWidth($sm) {
         height: 30px;
-        width: 294.5px;
+        // width: 294.5px;
         margin-top: 8px !important;
         font-size: 10px !important;
+    }
+    @include maxWidth($smallPhone) {
+        margin-top: 0 !important;
+        margin-bottom: 10px !important;
+        height: 23px !important;
+        font-size: 8px !important;
     }
 }
 .Login-form__bottom {
     height: 38px;
-    width: 575px;
+    width: 41vw;
     margin-top: 5px;
+    margin: 0 auto;
+    transition: 0.25s;
     @include DisplayFlexRowCenter($justy: space-between);
     @include maxWidth($lg) {
-        width: 460px;
+        // width: 460px;
         max-height: 30.5px !important;
         transition: 0.25s;
         margin-top: 4px;
     }
     @include maxWidth($md) {
         height: 24.5px;
-        width: 368px;
+        // width: 368px;
         margin-top: 3px;
     }
     @include maxWidth($sm) {
         height: 19.5px;
-        width: 294.5px;
+        // width: 294.5px;
         margin-top: 0.5px;
     }
+    @include maxWidth($smallPhone) {
+        margin-top: -3px;
+        height: 10px !important;
+    }
+
     &--link {
         a {
             text-decoration: none;
@@ -105,6 +127,11 @@
             @include maxWidth($sm) {
                 font-size: 10px;
             }
+            @include maxWidth($smallPhone) {
+                font-size: 7px;
+                margin-top: 0;
+                padding-top: 0;
+            }
         }
     }
     &--link:hover {
@@ -114,21 +141,25 @@
     }
 }
 .Login-form__footer {
-    width: 575px;
+    width: 41vw;
     @include DisplayFlexColumnCenter();
+    margin: 0 auto;
+    transition: 0.25s;
+    // padding-top: 10px;
     @include maxWidth($lg) {
-        width: 460px;
+        // width: 460px;
     }
     @include maxWidth($md) {
-        width: 368px;
+        // width: 368px;
     }
     @include maxWidth($sm) {
-        width: 294.5px !important;
+        // width: 294.5px !important;
     }
     &--icons {
         width: 308px;
         height: 49px;
         @include DisplayFlexRowCenter($justy: space-between);
+        padding-top: 10px;
         @include maxWidth($lg) {
             width: 246.5px;
             height: 39px;
@@ -140,6 +171,10 @@
         @include maxWidth($sm) {
             width: 157.5px !important;
             height: 25px;
+        }
+        @include maxWidth($smallPhone) {
+            width: 110px !important;
+            height: 20px;
         }
     }
 }
@@ -168,6 +203,11 @@
         width: 25px;
         font-size: 25px !important;
     }
+    @include maxWidth($smallPhone) {
+        height: 20px;
+        width: 20px;
+        font-size: 20px !important;
+    }
 }
 .fab:hover {
     font-size: 50px;
@@ -179,6 +219,9 @@
     }
     @include maxWidth($sm) {
         font-size: 26px !important;
+    }
+    @include maxWidth($smallPhone) {
+        font-size: 21px !important;
     }
 }
 .fa-google {
@@ -195,28 +238,36 @@
 }
 .Login-form__text {
     position: relative;
-    width: 575px;
+    width: 41vw;
     height: 50px;
     overflow: hidden;
     box-sizing: border-box;
+    transition: 0.25s;
     margin-top: -5px;
     @include maxWidth($lg) {
-        width: 460px;
+        // width: 460px;
         height: 40px;
         transition: 0.25s;
         margin-top: -4px;
     }
     @include maxWidth($md) {
-        width: 368px;
+        // width: 368px;
         height: 31px;
         transition: 0.25s;
         margin-top: -3px;
     }
     @include maxWidth($sm) {
         height: 25px;
-        width: 294.5px;
+        // width: 294.5px;
         margin-top: -2px;
-        // font-size: 3px;
+        font-size: 3px;
+        margin-bottom: 10px;
+    }
+    @include maxWidth($smallPhone) {
+        height: 20px;
+        // width: 294.5px;
+        margin-top: -2px;
+        font-size: 3px;
         margin-bottom: 10px;
     }
 }
@@ -232,8 +283,12 @@
         bottom: -11px;
     }
     @include maxWidth($sm) {
-        bottom: -10px;
+        // bottom: -10px;
         z-index: 1;
+    }
+    @include maxWidth($smallPhone) {
+        // width: 294.5px;
+        margin-top: -2px;
     }
 }
 .Login-form__string {
@@ -251,7 +306,7 @@
     transform: translate(-50%, 0);
 
     font-family: Roboto;
-    font-size: 20px;
+    font-size: 1.2vw;
     font-style: normal;
     font-weight: 500;
     line-height: 23px;
@@ -263,7 +318,7 @@
     }
 
     @include maxWidth($md) {
-        font-size: 13px;
+        font-size: 10px;
         padding-left: 16px;
         padding-right: 16px;
     }
@@ -271,7 +326,31 @@
         height: 15px;
         padding-left: 13px;
         padding-right: 13px;
-        font-size: 10px;
+        font-size: 8px;
         bottom: -6px;
+    }
+    @include maxWidth($smallPhone) {
+        // height: 15px;
+        padding-left: 8px;
+        padding-right: 8px;
+        font-size: 5.5px;
+        bottom: -6px;
+    }
+}
+#input_form-helper-text {
+    @include maxWidth($lg) {
+        margin-left: 0;
+        padding: 0;
+    }
+    @include maxWidth($md) {
+        font-size: 15px;
+    }
+    @include maxWidth($sm) {
+        // bottom: -10px;
+        font-size: 10px;
+    }
+    @include maxWidth($smallPhone) {
+        font-size: 6px;
+        // margin: 0;
     }
 }
