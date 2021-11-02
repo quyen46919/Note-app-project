@@ -6,17 +6,15 @@ import * as React from 'react';
 import * as Yup from 'yup';
 import './styles.scss';
 
-
-export default function FormRegister(props) {
-    const { getFormRegister, handleNext } = props;
+export default function FormRegister() {
 
     const validationSchema = Yup.object().shape({
-        email: Yup.string().email('Invalid email').required('Đây là thông tin bắt buộc'),
+        email: Yup.string().email('Email không hợp lệ!').required('Đây là thông tin bắt buộc'),
         pass: Yup.string()
             .max(100, 'Mật khẩu quá dài')
             .min(2, 'Mật khẩu quá ngắn')
             .required('Đây là thông tin bắt buộc!'),
-        passConfirm: Yup.string().required('Đây là thông tin bắt buộc!').oneOf([Yup.ref('pass')], 'Password must match'),
+        passConfirm: Yup.string().required('Đây là thông tin bắt buộc!').oneOf([Yup.ref('pass')], 'Password chưa giống password đã nhập'),
         phoneNumber: Yup.string()
             .max(10, 'Số điện thoại quá dài')
             .min(9, 'Số điện thoại quá ngắn!')
@@ -29,12 +27,14 @@ export default function FormRegister(props) {
             pass: '',
             passConfirm: '',
             phoneNumber: '',
-            toggle: false
+            check: false
         },
         validationSchema: validationSchema,
         onSubmit: (values) => {
-            getFormRegister(values);
-            handleNext();
+            if (values.check === false ) {
+                alert('Bạn chưa chấp nhận điều khoản và bảo mật');
+                return false;
+            }
         }
     });
     return (
@@ -83,7 +83,8 @@ export default function FormRegister(props) {
                         margin="normal" />
                     <div className="Register-form__checkbox">
                         <input type="checkbox"
-                            name='toggle'
+                            name='check'
+                            onChange = {formik.handleChange}
                         />
                         <div className="Register-form__rules">
                             <p>Tôi đã đọc và đồng ý với <a className="rule" href="">Điều khoản dịch vụ</a> và <a className="sec" href="">Bảo mật</a></p>
@@ -94,7 +95,7 @@ export default function FormRegister(props) {
             </Formik>
             <div className="Register-form__footer">
                 <div className="Register-form__text">
-                    <p className="Register-form__sym">______________________________________________________________________________________________________________</p>
+                    <p className="Register-form__sym">____________________________________________________________________________________________________________________________________</p>
                     <p className="Register-form__string">Hoặc đăng ký bằng tài khoản mạng xã hội</p>
                 </div>
                 <div className="Register-form__footer--icons">

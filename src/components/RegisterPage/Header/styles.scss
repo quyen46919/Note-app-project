@@ -4,7 +4,7 @@
     height: 101px;
     width: 65vw;
     @include DisplayFlexRowCenter($justy: space-between, $align: flex-end);
-    margin-bottom: 25px;
+    padding-bottom: 25px;
     margin: 0 auto;
     @include maxWidth($lg) {
         height: 81px;
@@ -21,30 +21,15 @@
     }
     @include maxWidth($sm) {
         height: 52px;
-        // width: 461.5px !important;
         margin-bottom: 13px;
         // margin: 0 auto;
     }
     &__left {
-        // background-color: $cyan-green !important;
         width: 18vw;
         height: 5vh;
         @include DisplayFlexRowCenter($justy: space-between);
         transition: 0.25s;
         cursor: pointer;
-        // @include maxWidth($lg) {
-        //     height: 56px;
-        //     width: 200px;
-        //     transition: 0.25s;
-        // }
-        // @include maxWidth($md) {
-        //     height: 45px;
-        //     width: 160px;
-        // }
-        // @include maxWidth($sm) {
-        //     width: 128px;
-        //     height: 36;
-        // }
         &_image {
             height: 69px;
             width: 69px;
