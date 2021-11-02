@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import './styles.scss';
 import { Formik, useFormik } from 'formik';
 import * as Yup from 'yup';
+import { green } from '@mui/material/colors';
 
 
 export default function FormRegister(props) {
@@ -29,10 +30,14 @@ export default function FormRegister(props) {
             pass: '',
             passConfirm: '',
             phoneNumber: '',
+            check: false
         },
         validationSchema: validationSchema,
         onSubmit: (values) => {
-            console.log(values);
+            if (values.check === false ) {
+                alert('Bạn chưa chấp nhận điều khoản và bảo mật');
+                return false;
+            }
             getFormRegister(values);
             handleNext();
         }
@@ -83,7 +88,9 @@ export default function FormRegister(props) {
                         margin="normal" />
                     <div className="Register-form__checkbox">
                         <input type="checkbox"
-                            name='toggle'/>
+                            name='check'
+                            onChange = {formik.handleChange}
+                        />
                         <div className="Register-form__rules">
                             <p>Tôi đã đọc và đồng ý với <a className="rule" href="">Điều khoản dịch vụ</a> và <a className="sec" href="">Bảo mật</a></p>
                         </div>

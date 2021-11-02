@@ -154,6 +154,7 @@
     &__footer {
         width: 41vw;
         @include DisplayFlexColumnCenter();
+        padding-top: 20px;
         margin: 0 auto !important;
         @include maxWidth($lg) {
             // width: 460px;
@@ -168,6 +169,7 @@
         &--icons {
             width: 308px;
             height: 49px;
+            padding-top: 20px;
             @include DisplayFlexRowCenter($justy: space-between);
             @include maxWidth($lg) {
                 width: 246.5px;
