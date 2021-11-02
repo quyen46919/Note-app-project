@@ -5,8 +5,6 @@ import Button from '@mui/material/Button';
 import './styles.scss';
 import { Formik, useFormik } from 'formik';
 import * as Yup from 'yup';
-import { green } from '@mui/material/colors';
-
 
 export default function FormRegister(props) {
     const { getFormRegister, handleNext } = props;
