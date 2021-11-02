@@ -16,7 +16,7 @@ export default function FormRegister(props) {
             .max(100, 'Mật khẩu quá dài')
             .min(2, 'Mật khẩu quá ngắn')
             .required('Đây là thông tin bắt buộc!'),
-        passConfirm: Yup.string().required('Đây là thông tin bắt buộc!').oneOf([Yup.ref('pass')], 'Password must match'),
+        passConfirm: Yup.string().required('Đây là thông tin bắt buộc!').oneOf([Yup.ref('pass')], 'Password chưa giống password đã nhập'),
         phoneNumber: Yup.string()
             .max(10, 'Số điện thoại quá dài')
             .min(9, 'Số điện thoại quá ngắn!')
@@ -29,7 +29,6 @@ export default function FormRegister(props) {
             pass: '',
             passConfirm: '',
             phoneNumber: '',
-            toggle: false
         },
         validationSchema: validationSchema,
         onSubmit: (values) => {
@@ -84,8 +83,7 @@ export default function FormRegister(props) {
                         margin="normal" />
                     <div className="Register-form__checkbox">
                         <input type="checkbox"
-                            name='toggle'
-                        />
+                            name='toggle'/>
                         <div className="Register-form__rules">
                             <p>Tôi đã đọc và đồng ý với <a className="rule" href="">Điều khoản dịch vụ</a> và <a className="sec" href="">Bảo mật</a></p>
                         </div>
