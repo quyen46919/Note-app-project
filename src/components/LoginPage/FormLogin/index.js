@@ -40,6 +40,7 @@ export default function FormLogin(props) {
                         onBlur={formik.handleBlur}
                         onChange={formik.handleChange}
                         margin='normal'
+                        id="input_form"
                         placeholder='Email' />
                     <TextField className='Login-form__input'
                         type='password'
@@ -50,6 +51,7 @@ export default function FormLogin(props) {
                         onBlur={formik.handleBlur}
                         onChange={formik.handleChange}
                         margin='normal'
+                        id="input_form"
                         placeholder='Password' />
                     <Button className='Login-form__button' type='submit' variant='contained' size='large' disableElevation>
                         Đăng Nhập
@@ -66,7 +68,7 @@ export default function FormLogin(props) {
             </div>
             <div className='Login-form__footer'>
                 <div className='Login-form__text'>
-                    <p className='Login-form__sym'>______________________________________________________________________________________________________________</p>
+                    <p className='Login-form__sym'>___________________________________________________________________________________________________________________________________________________________________________________</p>
                     <p className='Login-form__string'>Hoặc đăng nhập bằng tài khoản mạng xã hội</p>
                 </div>
                 <div className='Login-form__footer--icons'>

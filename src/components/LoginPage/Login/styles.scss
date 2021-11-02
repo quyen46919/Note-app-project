@@ -20,22 +20,26 @@
 
 .Login--form {
     height: 973px;
-    width: 901px;
+    width: 65vw;
     background-color: $white;
     @include DisplayFlexColumnCenter($justy: flex-start);
     padding-top: 25px;
     @include maxWidth($lg) {
-        width: 721px;
+        // width: 721px;
         transition: 0.25s;
         padding-top: 20px;
     }
 
     @include maxWidth($md) {
-        width: 577px;
+        // width: 577px;
         padding-top: 16px;
     }
     @include maxWidth($sm) {
-        width: 461.5px;
+        // width: 461.5px;
         margin-bottom: 13px;
+    }
+    @include maxWidth($smallPhone) {
+        margin-bottom: 0;
+        padding-top: 10px;
     }
 }

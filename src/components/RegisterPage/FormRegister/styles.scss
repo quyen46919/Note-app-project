@@ -4,29 +4,33 @@
     &__input {
         // background-color: $blue !important ;
         height: 58px;
-        width: 575px;
+        width: 41vw;
         left: 0px;
         // top: 96px;
         margin-top: 20px !important;
         border-radius: 5px;
         padding: 16px, 24px, 16px, 24px;
         @include maxWidth($lg) {
-            width: 460px;
+            // width: 460px;
             height: 46.5px;
             transition: 0.25s;
             margin-top: 16px !important;
         }
         @include maxWidth($md) {
             height: 37px;
-            width: 368px;
+            // width: 368px;
             margin-top: 13px !important;
         }
         @include maxWidth($sm) {
             height: 29.5px;
-            width: 294.5px;
+            // width: 294.5px;
             margin-top: 10px !important;
         }
-        input#margin-normal {
+        @include maxWidth($smallPhone) {
+            margin-top: 0 !important;
+            margin-bottom: 10px !important;
+        }
+        input#input_form {
             padding: 16.5px 14px;
             @include maxWidth($lg) {
                 padding: 13px 11px;
@@ -37,42 +41,50 @@
             @include maxWidth($sm) {
                 padding: 6px 7px;
             }
+            @include maxWidth($smallPhone) {
+                padding: 5px 6px;
+                font-size: 10px;
+            }
         }
     }
     &__checkbox {
-        width: 575px;
-        // height: 58px;
-        left: 78px;
+        width: 41vw;
         @include DisplayFlexRowCenter($justy: flex-start);
-        padding-left: 160px;
-        margin: 0;
-        @include maxWidth($lg) {
-            width: 460px;
-            // padding: 13px 11px;
-            padding-left: 128px;
+        margin: 0 auto;
+        @include maxWidth($smallPhone) {
+            height: 20px;
+            margin-top: -10px;
         }
-        @include maxWidth($md) {
-            width: 368px;
-            padding-left: 100px;
-        }
-        @include maxWidth($sm) {
-            padding: 6px 7px;
-            // margin: 0 auto;
-            margin-left: 73px;
+        input {
+            margin-right: 15px;
+            @include maxWidth($smallPhone) {
+                height: 15px;
+                width: 15px;
+            }
         }
     }
     &__rules {
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
         @include maxWidth($lg) {
-            font-size: 13px;
+            font-size: 12px !important;
             margin-left: -10px;
         }
         @include maxWidth($md) {
-            font-size: 10px;
+            font-size: 10px !important;
         }
         @include maxWidth($sm) {
-            font-size: 9px;
+            font-size: 7px !important;
             // margin: 0 auto;
             // margin-left: 120px;
+        }
+        @include maxWidth($smallPhone) {
+            font-size: 6px;
         }
         a {
             text-decoration: none;
@@ -83,13 +95,16 @@
             font-size: 16px;
             line-height: 19px;
             @include maxWidth($lg) {
-                font-size: 13px;
+                font-size: 12px;
             }
             @include maxWidth($md) {
                 font-size: 10px;
             }
             @include maxWidth($sm) {
-                font-size: 9px;
+                font-size: 7px;
+            }
+            @include maxWidth($smallPhone) {
+                font-size: 6px;
             }
         }
         a.rule {
@@ -101,7 +116,7 @@
     }
     &__button {
         height: 58px;
-        width: 575px;
+        width: 41vw;
         margin-top: 17px !important;
         border-radius: 5px;
         font-family: Roboto;
@@ -111,7 +126,7 @@
         line-height: 28px;
         background-color: $blue !important;
         @include maxWidth($lg) {
-            width: 460px;
+            // width: 460px;
             max-height: 46px !important;
             transition: 0.25s;
             margin-top: 13.5px !important;
@@ -119,30 +134,36 @@
         }
         @include maxWidth($md) {
             height: 37px;
-            width: 368px;
+            // width: 368px;
             margin-top: 5px !important;
             font-size: 13px !important;
         }
         @include maxWidth($sm) {
             height: 30px;
-            width: 294.5px;
+            // width: 294.5px;
             margin-top: 8px !important;
             font-size: 10px !important;
         }
+        @include maxWidth($smallPhone) {
+            margin-top: 0 !important;
+            margin-bottom: 10px !important;
+            height: 23px !important;
+            font-size: 8px !important;
+        }
     }
     &__footer {
-        width: 575px;
+        width: 41vw;
         @include DisplayFlexColumnCenter();
         margin: 0 auto !important;
         @include maxWidth($lg) {
-            width: 460px;
+            // width: 460px;
             // margin: 0 auto;
         }
         @include maxWidth($md) {
-            width: 368px;
+            // width: 368px;
         }
         @include maxWidth($sm) {
-            width: 294.5px !important;
+            // width: 294.5px !important;
         }
         &--icons {
             width: 308px;
@@ -160,32 +181,44 @@
                 width: 157.5px !important;
                 height: 25px;
             }
+            @include maxWidth($smallPhone) {
+                width: 110px !important;
+                height: 20px;
+            }
         }
     }
     &__text {
         position: relative;
-        width: 575px;
+        width: 41vw;
         height: 50px;
         overflow: hidden;
         box-sizing: border-box;
+        transition: 0.25s;
         margin-top: -5px;
         @include maxWidth($lg) {
-            width: 460px;
+            // width: 460px;
             height: 40px;
             transition: 0.25s;
             margin-top: -4px;
         }
         @include maxWidth($md) {
-            width: 368px;
+            // width: 368px;
             height: 31px;
             transition: 0.25s;
             margin-top: -3px;
         }
         @include maxWidth($sm) {
             height: 25px;
-            width: 294.5px;
+            // width: 294.5px;
             margin-top: -2px;
-            // font-size: 3px;
+            font-size: 3px;
+            margin-bottom: 10px;
+        }
+        @include maxWidth($smallPhone) {
+            height: 20px;
+            // width: 294.5px;
+            margin-top: -10px;
+            font-size: 3px;
             margin-bottom: 10px;
         }
     }
@@ -201,32 +234,15 @@
             bottom: -11px;
         }
         @include maxWidth($sm) {
-            bottom: -10px;
+            // bottom: -10px;
             z-index: 1;
+        }
+        @include maxWidth($smallPhone) {
+            // width: 294.5px;
+            margin-top: -2px;
         }
     }
     &__string {
-        // position: absolute;
-        // z-index: 2;
-        // width: fit-content;
-        // background-color: $white;
-        // text-align: center;
-        // box-sizing: border-box;
-        // padding-left: 20px;
-        // padding-right: 20px;
-
-        // // // top: 50%;
-        // left: 50%;
-        // transform: translate(-50%, 0);
-
-        // font-family: Roboto;
-        // font-size: 20px;
-        // font-style: normal;
-        // font-weight: 500;
-        // line-height: 23px;
-        // letter-spacing: 0em;
-        // text-align: left;
-        // color: $font-text-color-3;
         position: absolute;
         z-index: 2;
         width: fit-content;
@@ -241,7 +257,7 @@
         transform: translate(-50%, 0);
 
         font-family: Roboto;
-        font-size: 20px;
+        font-size: 1.2vw;
         font-style: normal;
         font-weight: 500;
         line-height: 23px;
@@ -253,7 +269,7 @@
         }
 
         @include maxWidth($md) {
-            font-size: 13px;
+            font-size: 10px;
             padding-left: 16px;
             padding-right: 16px;
         }
@@ -261,7 +277,14 @@
             height: 15px;
             padding-left: 13px;
             padding-right: 13px;
-            font-size: 10px;
+            font-size: 8px;
+            bottom: -6px;
+        }
+        @include maxWidth($smallPhone) {
+            // height: 15px;
+            padding-left: 8px;
+            padding-right: 8px;
+            font-size: 5.5px;
             bottom: -6px;
         }
     }
@@ -291,6 +314,11 @@
         width: 25px;
         font-size: 25px !important;
     }
+    @include maxWidth($smallPhone) {
+        height: 20px;
+        width: 20px;
+        font-size: 20px !important;
+    }
 }
 .fab:hover {
     font-size: 50px;
@@ -302,6 +330,9 @@
     }
     @include maxWidth($sm) {
         font-size: 26px !important;
+    }
+    @include maxWidth($smallPhone) {
+        font-size: 21px !important;
     }
 }
 .fa-google {
@@ -315,4 +346,23 @@
 }
 .fa-github {
     color: $color-github;
+}
+#input_form-helper-text {
+    @include maxWidth($lg) {
+        margin-left: 0;
+        padding: 0;
+    }
+    @include maxWidth($md) {
+        font-size: 12px;
+        margin-top: -1px;
+    }
+    @include maxWidth($sm) {
+        // bottom: -10px;
+        font-size: 10px;
+    }
+    @include maxWidth($smallPhone) {
+        font-size: 6px;
+        // margin: 0;
+        margin-top: 3px;
+    }
 }
