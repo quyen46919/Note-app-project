@@ -71,20 +71,22 @@ export default function FormRegister() {
                         onChange={formik.handleChange}
                         id="input_form"
                         margin="normal" />
-                    <TextField className="Register-form__input"
+                    <TextField
+                        className="Register-form__input"
                         type="text"
                         placeholder="Số điện thoại"
-                        name='phoneNumber'
+                        name="phoneNumber"
                         value={formik.values.phoneNumber}
                         error={Boolean(formik.touched.phoneNumber && formik.errors.phoneNumber)}
                         helperText={formik.touched.phoneNumber && formik.errors.phoneNumber}
                         onBlur={formik.handleBlur}
                         onChange={formik.handleChange}
                         id="input_form"
-                        margin="normal" />
+                        margin="normal"
+                    />
                     <div className="Register-form__checkbox">
                         <input type="checkbox"
-                            name='check'
+                            name="check"
                             onChange = {formik.handleChange}
                         />
                         <div className="Register-form__rules">

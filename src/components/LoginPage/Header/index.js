@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 // import TextField from '@mui/material/TextField';
 import './styles.scss';
 import logo from 'assets/images/logo.png'; // with import
+import { Link } from 'react-router-dom';
 // import nottable from 'assets/images/Nottable.png';
 // import IntroPage from 'components/IntroPage';
 
@@ -26,7 +27,9 @@ export default function Header() {
                         </select>
                     </div>
                     <div className="Login-form--header__right_link">
-                        <a href="http://localhost:3000/register">Đi đến đăng ký</a>
+                        <Link to="/register">
+                            Đi đến đăng ký
+                        </Link>
                     </div>
                 </div>
             </div>
