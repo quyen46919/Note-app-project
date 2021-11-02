@@ -1,10 +1,10 @@
-import * as React from 'react';
 import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import './styles.scss';
+import TextField from '@mui/material/TextField';
 import { Formik, useFormik } from 'formik';
+import * as React from 'react';
 import * as Yup from 'yup';
+import './styles.scss';
 
 export default function FormRegister() {
 

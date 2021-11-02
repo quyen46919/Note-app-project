@@ -1,12 +1,12 @@
-import { FavoriteBorder, LightOutlined, Search, TranslateOutlined } from '@mui/icons-material';
+import { FavoriteBorder, Search, TranslateOutlined } from '@mui/icons-material';
 import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import { Button, TextField, Tooltip } from '@mui/material';
 import { makeStyles } from '@mui/styles';
+import logo from 'assets/images/logo.png';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import AccountMenu from '../AccountMenu';
 import LeftDrawer from '../LeftDrawer';
-import logo from 'assets/images/logo.png';
 import './styles.scss';
 
 const useStyles = makeStyles({
@@ -25,7 +25,8 @@ const useStyles = makeStyles({
         }
     },
     icon: {
-        fontSize: '22px!important'
+        fontSize: '22px!important',
+        color: '#3C3C3C'
     },
     textField: {
         minHeight: 35,
@@ -65,16 +66,13 @@ function HeaderRow() {
                 </div>
                 <div className="header__links">
                     <NavLink to="/home" exact>
-                        Trang chủ
+                        Tài liệu
+                    </NavLink>
+                    <NavLink to="/calendar" exact>
+                        Lịch
                     </NavLink>
                     <NavLink to="/home/account" exact>
-                        Cá nhân
-                    </NavLink>
-                    <NavLink to="/" exact>
-                        Giới thiệu
-                    </NavLink>
-                    <NavLink to="/not-found" exact>
-                        404 Not found
+                        Hồ sơ
                     </NavLink>
                 </div>
             </div>
@@ -89,11 +87,6 @@ function HeaderRow() {
                             spellCheck="false"
                         />
                     </div>
-                    <Tooltip disableFocusListener disableTouchListener title="Chế độ tối">
-                        <Button className={classes.buttonIcon}>
-                            <LightOutlined className={classes.icon}/>
-                        </Button>
-                    </Tooltip>
                     <Tooltip disableFocusListener disableTouchListener title="Đổi ngôn ngữ">
                         <Button className={classes.buttonIcon}>
                             <TranslateOutlined className={classes.icon}/>
