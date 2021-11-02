@@ -1,6 +1,5 @@
 @import 'assets/scss/variables';
 @import 'assets/scss/mixins';
-// @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Roboto:wght@100&family=Work+Sans:wght@100;500&family=Zen+Kurenaido&display=swap');
 
 .intro-introduce{
     width: 90%;
@@ -131,6 +130,7 @@
 
                     .fab{
                         font-size: 22px;
+                        @include displayFlex(row, wrap, center, center);
                     }
                 }
             }
