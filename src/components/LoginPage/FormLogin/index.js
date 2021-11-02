@@ -5,9 +5,10 @@ import Button from '@mui/material/Button';
 import './styles.scss';
 import { Formik, useFormik } from 'formik';
 import * as Yup from 'yup';
+import { Link, useHistory } from 'react-router-dom';
 
-export default function FormLogin(props) {
-    const { getFormLogin, handleNext } = props;
+export default function FormLogin() {
+    let history = useHistory();
 
     const validationSchema = Yup.object().shape({
         email: Yup.string().email('Email không hợp lệ!').required('Đây là thông tin bắt buộc'),
@@ -22,9 +23,8 @@ export default function FormLogin(props) {
             pass: ''
         },
         validationSchema: validationSchema,
-        onSubmit: (values) => {
-            getFormLogin(values);
-            handleNext();
+        onSubmit: () => {
+            history.push('/home');
         }
     });
     return (
@@ -63,7 +63,9 @@ export default function FormLogin(props) {
                     <a href=''>Quên mật khẩu?</a>
                 </div>
                 <div className='Login-form__bottom--link'>
-                    <a href='http://localhost:3000/register'>Đăng ký ngay</a>
+                    <Link to="/register">
+                        Đăng ký ngay
+                    </Link>
                 </div>
             </div>
             <div className='Login-form__footer'>

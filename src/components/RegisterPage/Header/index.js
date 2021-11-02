@@ -2,6 +2,7 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import './styles.scss';
 import logo from 'assets/images/logo.png';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
     return (
@@ -23,12 +24,14 @@ export default function Header() {
                         </select>
                     </div>
                     <div className="Register-form--header__right_link">
-                        <a href="http://localhost:3000/login">Trở về đăng nhập</a>
+                        <Link to="/login">
+                            Trở về đăng nhập
+                        </Link>
                     </div>
                 </div>
             </div>
             <div className="Register-form--title">
-                    Đăng ký bằng Email
+                Đăng ký bằng Email
             </div>
         </Box>
     );
