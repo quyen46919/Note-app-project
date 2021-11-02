@@ -98,7 +98,7 @@ function CardColumn(props) {
     };
 
     const createNewCard = () => {
-        if (createCardContent.content) {
+        if (createCardContent.content || createCardContent.title || createCardContent.cover) {
             // fake create new column
             const newCardToCreate = {
                 id: Math.random().toString(36).substr(2, 5),
