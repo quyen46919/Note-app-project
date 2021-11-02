@@ -9,7 +9,7 @@ import * as Yup from 'yup';
 export default function FormRegister() {
 
     const validationSchema = Yup.object().shape({
-        email: Yup.string().email('Invalid email').required('Đây là thông tin bắt buộc'),
+        email: Yup.string().email('Email không hợp lệ!').required('Đây là thông tin bắt buộc'),
         pass: Yup.string()
             .max(100, 'Mật khẩu quá dài')
             .min(2, 'Mật khẩu quá ngắn')
