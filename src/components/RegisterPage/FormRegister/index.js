@@ -6,8 +6,7 @@ import './styles.scss';
 import { Formik, useFormik } from 'formik';
 import * as Yup from 'yup';
 
-export default function FormRegister(props) {
-    const { getFormRegister, handleNext } = props;
+export default function FormRegister() {
 
     const validationSchema = Yup.object().shape({
         email: Yup.string().email('Invalid email').required('Đây là thông tin bắt buộc'),
@@ -36,8 +35,6 @@ export default function FormRegister(props) {
                 alert('Bạn chưa chấp nhận điều khoản và bảo mật');
                 return false;
             }
-            getFormRegister(values);
-            handleNext();
         }
     });
     return (
@@ -98,7 +95,7 @@ export default function FormRegister(props) {
             </Formik>
             <div className="Register-form__footer">
                 <div className="Register-form__text">
-                    <p className="Register-form__sym">______________________________________________________________________________________________________________</p>
+                    <p className="Register-form__sym">____________________________________________________________________________________________________________________________________</p>
                     <p className="Register-form__string">Hoặc đăng ký bằng tài khoản mạng xã hội</p>
                 </div>
                 <div className="Register-form__footer--icons">
