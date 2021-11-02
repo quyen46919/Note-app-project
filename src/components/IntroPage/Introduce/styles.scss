@@ -1,0 +1,139 @@
+@import 'assets/scss/variables';
+@import 'assets/scss/mixins';
+// @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&family=Roboto:wght@100&family=Work+Sans:wght@100;500&family=Zen+Kurenaido&display=swap');
+
+.intro-introduce{
+    width: 90%;
+    height: auto;
+    min-height: 550px;
+    margin: auto;
+    display: flex;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+
+    @include maxWidth($xxl) {
+        min-height: 350px;
+    }
+
+    @include maxWidth($md) {
+        flex-direction: column-reverse;
+        gap: 2rem;
+        padding-top: 0rem;
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .intro-introduce__content{
+        width: 100%;
+        height: auto;
+        z-index: 5;
+
+        @include maxWidth($smallPhone) {
+            width: 100%;
+        }
+        
+        .intro-introduce__image{
+            height: auto;
+            width: 100%;
+            margin-top: 13px;
+            position: relative;
+
+            .intro-introduce__pen-img{
+                height: 200px;
+                width: 276px;
+                position: absolute;
+                top: -74px;
+                left: 132px;
+                z-index: -10;
+            }
+
+            .intro-introduce__img-content{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .intro-introduce__text{
+            height: auto;
+            width: 100%;
+
+            p{
+                color: $black-text-color-4;
+                font-family: Roboto;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 21px;
+                letter-spacing: 0em;
+                text-align: left;
+            }
+        }
+        .intro-introduce__bnt-icon{
+            height: auto;
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+
+            @include maxWidth($phone) {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .intro-introduce__button{
+                height: 61px;
+                width: 300px;
+                // background-color: darkgreen;
+
+                .intro-introduce__btn{
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 5px;
+                    background: #18A0FB;
+                    color: $white;
+                    text-transform: none;
+
+                    font-family: Roboto;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 23px;
+                }
+            }
+            .intro-introduce__icon{
+                height: 100%;
+                width: 100%;
+                margin-left: 32px;
+                @include displayFlex(row, wrap, flex-start, center);
+                gap: 1rem;
+
+                @include maxWidth($phone) {
+                    margin-left: 0;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .intro-introduce__box-icon{
+                    height: 42px;
+                    width: 42px;
+                    border-radius: 50%;
+                    cursor: pointer;
+                    border: 2px solid black;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .fab{
+                        font-size: 22px;
+                    }
+                }
+            }
+    }
+}
+}
