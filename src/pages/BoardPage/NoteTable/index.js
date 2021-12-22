@@ -1,7 +1,7 @@
 import { Add, Devices, FilterList, Fullscreen, MoreHoriz } from '@mui/icons-material';
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField, Tooltip } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { addNewColumn, fetchBoarDetail, updateBoard, updateCard, updateColumn } from 'apiCall/board-api';
+import { addNewColumn, fetchBoarDetail, updateBoard, updateCard, updateColumn } from 'apiCall/board.api';
 import { cloneDeep } from 'lodash';
 import { useSnackbar } from 'notistack';
 import React, { useEffect, useState } from 'react';

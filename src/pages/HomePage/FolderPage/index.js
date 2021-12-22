@@ -3,7 +3,7 @@ import { Button, Dialog, DialogActions, DialogContent, DialogContentText, Dialog
 import FormControl from '@mui/material/FormControl';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
-import { addNewBoard, fetchAllBoard } from 'apiCall/board-api';
+import { addNewBoard, fetchAllBoard } from 'apiCall/board.api';
 import FadeInWhenVisible from 'components/FadeInWhenVisible';
 import { AuthContext } from 'context/AuthContext';
 import { AnimatePresence } from 'framer-motion';

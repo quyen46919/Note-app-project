@@ -1,7 +1,7 @@
 /* eslint-disable indent */
 import { Email, Lock, Person } from '@mui/icons-material';
 import { Button, Checkbox, FormControlLabel, InputAdornment, TextField, useMediaQuery } from '@mui/material';
-import { login, register } from 'apiCall/auth';
+import { login, register } from 'apiCall/auth.api';
 import logo from 'assets/images/logo.png';
 import bg from 'assets/images/travel.jpg';
 import { AuthContext } from 'context/AuthContext';
@@ -176,7 +176,6 @@ function AccountPage() {
                             initialValues={{ username: '', password: '', email: '', check: true }}
                             validationSchema={registerSchema}
                             onSubmit={(values, actions) => {
-                                console.log(values);
                                 if (values.check === false) {
                                     enqueueSnackbar('Bạn phải chấp nhận điều khoản sử dụng', {
                                         variant: 'error'
@@ -188,7 +187,6 @@ function AccountPage() {
                                 delete values.check;
                                 register(values)
                                     .then((res) => {
-                                        console.log(res);
                                         actions.setSubmitting(false);
                                         enqueueSnackbar('Đăng ký thành công', {
                                             variant: 'success'
@@ -200,9 +198,8 @@ function AccountPage() {
                                         });
                                     })
                                     .catch((err) => {
-                                        console.log(err.response.data);
                                         actions.setSubmitting(false);
-                                        enqueueSnackbar(err?.response.data.message || 'Đăng ký thất bại', {
+                                        enqueueSnackbar(err.response.data.message || 'Đăng ký thất bại', {
                                             variant: 'error'
                                         });
                                     });

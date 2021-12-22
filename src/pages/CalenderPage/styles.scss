@@ -27,6 +27,10 @@ $upcoming-panel-width: 340px;
         }
     }
 
+    &__no-event {
+        width: 100%;
+    }
+
     &__list {
         width: 100%;
         height: 540px;
@@ -61,8 +65,8 @@ $upcoming-panel-width: 340px;
         transition: $primary-transition;
     }
 
-     button:active:hover, 
-     button:active:focus, 
+    //  button:active:hover, 
+    //  button:active:focus, 
      button.rbc-active:hover, 
      button.rbc-active:focus {
         background-color: $blue!important;
@@ -122,6 +126,20 @@ $upcoming-panel-width: 340px;
     border-radius: 10px;
     box-shadow: $secondary-box-shadow;
     @include padding(1rem);
+    position: relative;
+
+    &__delete {
+        position: absolute!important;
+        top: 6px;
+        right: 6px;
+        background-color: transparent!important;
+
+        * {background-color: transparent!important;}
+
+        svg {
+            color: silver!important;
+        }
+    }
 
     &__time {
         width: 100%;

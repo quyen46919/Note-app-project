@@ -43,10 +43,10 @@ $borderRadius: 10px;
         font-weight: 500;
         margin-bottom: 0.6rem;
         text-align: left;
-        @include textOverflowEllipsis();
         background: -webkit-linear-gradient($blue,$cyan-text-color-1);
         background-clip: text!important;
         -webkit-text-fill-color: transparent!important;
+        @include textOverflowEllipsis();
     }
     &--content {
         font-size: 14px;
@@ -54,6 +54,7 @@ $borderRadius: 10px;
         color: $font-text-color-3;
         text-align: left;
         margin-bottom: 0.6rem;
+        overflow: hidden;
     }
 
     &.disabled {

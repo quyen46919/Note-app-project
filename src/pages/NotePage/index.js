@@ -1,24 +1,88 @@
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, TextField } from '@mui/material';
-import { seedNote } from 'assets/seedNote';
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle, TextField } from '@mui/material';
+import { addNewNote, deleteNote, fetchAllNotes } from 'apiCall/note.api';
 import SearchBar from 'components/SearchBar';
-import React, { useEffect, useState } from 'react';
+import { AuthContext } from 'context/AuthContext';
+import { cloneDeep } from 'lodash';
+import { useSnackbar } from 'notistack';
+import React, { useContext, useEffect, useState } from 'react';
 import SingleNote from './SingleNote';
 import './styles.scss';
 
 function NotePage() {
-    const [data, setData] = useState([]);
-    const [ filterText, setFilterText ] = useState('');
+    const [allNotes, setAllNotes] = useState([]);
+    const [filterText, setFilterText ] = useState('');
     const [click, setClick] = useState(false);
     const [newNote, setNewNote] = useState({ title: '', content: '' });
+    const { nottableUser } = useContext(AuthContext);
+    const [confirm, setConfirm] = useState(false);
+    const [noteToDelete, setNoteToDelete] = useState('');
+    const { enqueueSnackbar } = useSnackbar();
 
     useEffect(() => {
-        setData(seedNote);
+        fetchAllNotes(nottableUser.id)
+            .then((res) => setAllNotes(res || []))
+            .catch((err) => {
+                enqueueSnackbar(err.response.data.message || 'Lấy dữ liệu thất bại', {
+                    variant: 'error'
+                });
+            });
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [seedNote]);
+    }, []);
 
-    const deleteNote = (id) => {
-        const filterData = data.filter((note) => note.id !== id);
-        setData(filterData);
+    const deleteConfirmedNote = () => {
+        const cloneAllNotes = cloneDeep(allNotes);
+        const filterData = allNotes.filter((note) => note.id !== noteToDelete);
+        setAllNotes(filterData);
+
+        deleteNote(noteToDelete)
+            .then((res) => {
+                enqueueSnackbar(res.data || 'Xóa ghi chú thành công', {
+                    variant: 'success'
+                });
+            })
+            .catch((err) => {
+                setAllNotes(cloneAllNotes);
+                enqueueSnackbar(err.response.data.message || 'Xóa ghi chú thất bại', {
+                    variant: 'error'
+                });
+            });
+        setConfirm(false);
+        setNoteToDelete('');
+    };
+
+    const createNewNote = () => {
+        if (!newNote.title && !newNote.content) return;
+        const currentNotes = cloneDeep(allNotes);
+
+        let newNoteToCreate = {
+            owner: nottableUser.id,
+            title: newNote.title,
+            content: newNote.content,
+            cover: null
+        };
+
+        addNewNote(newNoteToCreate)
+            .then((res) => {
+                setAllNotes(prevNote => [...prevNote, res]);
+            })
+            .catch((err) => {
+                setAllNotes(currentNotes);
+                enqueueSnackbar(err.response.data.message || 'Tạo mới ghi chú thất bại', {
+                    variant: 'error'
+                });
+            });
+        setNewNote({ title: '', content: '' });
+        setClick(false);
+    };
+
+    const handleDeleteNote = (id) => {
+        setNoteToDelete(id);
+        setConfirm(true);
+    };
+
+    const handleClosePopup = () => {
+        setNoteToDelete('');
+        setConfirm(false);
     };
 
     const handleFilterTextChange = (e) => { setFilterText(e.target.value); };
@@ -34,20 +98,6 @@ function NotePage() {
         }));
     };
 
-    const createNewNote = () => {
-        if (!newNote.title && !newNote.content) return;
-
-        let newNoteToCreate = {
-            id: Math.random().toString(36).substr(2, 5),
-            title: newNote.title,
-            content: newNote.content,
-            isCompleted: false
-        };
-
-        data.unshift(newNoteToCreate);
-        setClick(false);
-    };
-
     return (
         <div className="note-page">
             <div className="note-page__search-bar">
@@ -57,9 +107,19 @@ function NotePage() {
                     handleButtonClick={handleButtonClick}
                 />
             </div>
-            <div className="note-page__list">
-                { data.map(note => <SingleNote key={note.id} note={note} deleteNote={deleteNote}/>) }
-            </div>
+            { allNotes.length ?
+                <div className="note-page__list">
+                    { allNotes.map((note) => {
+                        if (note.title.toLowerCase().includes(filterText.toLowerCase())) return (
+                            <SingleNote key={note.id} note={note} handleDeleteNote={handleDeleteNote}/>
+                        );
+                    })}
+                </div>
+                :
+                <div className="note-page__no-note">
+                    Danh sách ghi chú rỗng
+                </div>
+            }
             <Dialog open={click} onClose={handleClose}>
                 <DialogTitle>Tạo mới ghi chú</DialogTitle>
                 <DialogContent>
@@ -86,6 +146,8 @@ function NotePage() {
                         spellCheck="false"
                         name="content"
                         onChange={handleInputContent}
+                        multiline
+                        rows={3}
                     />
                 </DialogContent>
                 <DialogActions>
@@ -93,6 +155,31 @@ function NotePage() {
                     <Button onClick={handleClose}>Huỷ</Button>
                 </DialogActions>
             </Dialog>
+            {confirm &&
+                <Dialog
+                    open={confirm}
+                    onClose={handleClosePopup}
+                    aria-labelledby="alert-dialog-title"
+                    aria-describedby="alert-dialog-description"
+                >
+                    <DialogTitle>
+                        Bạn có thực sự muốn xóa ghi chú này
+                    </DialogTitle>
+                    <DialogContent>
+                        <DialogContentText id="alert-dialog-description">
+                            Ghi chú này sẽ bị xóa đi và không thể khôi phục
+                        </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={deleteConfirmedNote} color="primary">
+                            Đồng ý
+                        </Button>
+                        <Button onClick={handleClosePopup} color="primary" autoFocus>
+                            Hủy
+                        </Button>
+                    </DialogActions>
+                </Dialog>
+            }
         </div>
     );
 }

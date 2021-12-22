@@ -5,7 +5,7 @@ import {
     DialogTitle, IconButton, Input, TextField
 } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { addNewCard, deleteCard, deleteColumn, updateColumn } from 'apiCall/board-api';
+import { addNewCard, deleteCard, deleteColumn, updateColumn } from 'apiCall/board.api';
 import { cloneDeep } from 'lodash';
 import { useSnackbar } from 'notistack';
 import React, { useEffect, useState } from 'react';

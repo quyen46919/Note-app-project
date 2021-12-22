@@ -1,20 +1,27 @@
-import React, { useEffect, useState } from 'react';
-import { Calendar, momentLocalizer, Views } from 'react-big-calendar';
+import { Close } from '@mui/icons-material';
+import { IconButton } from '@mui/material';
+import { addNewEvent, deleteEvent, fetchAllEvents } from 'apiCall/event.api';
+import ConfirmPopup from 'components/ConfirmPopup';
+import { AuthContext } from 'context/AuthContext';
+import { cloneDeep } from 'lodash';
 import moment from 'moment';
+import { useSnackbar } from 'notistack';
+import React, { useContext, useEffect, useState } from 'react';
+import { Calendar, momentLocalizer, Views } from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
-import events from 'assets/events';
+import { formatDate } from 'utils/formatDate';
 import './styles.scss';
+import PropTypes from 'prop-types';
 
-function formatVNDate(datetime) {
-    var date = datetime.toJSON().slice(0, 10);
-    return date.slice(8, 10) + '/'
-            + date.slice(5, 7) + '/'
-            + date.slice(0, 4);
-}
+UpcomingEvent.propTypes = {
+    event: PropTypes.object.isRequired,
+    handleDeleteEvent: PropTypes.func.isRequired
+};
 
-function UpcomingEvent({ event }) {
-    const startTime = formatVNDate(event.start);
-    const endTime = formatVNDate(event.end);
+function UpcomingEvent(props) {
+    const { event, handleDeleteEvent } = props;
+    const startTime = formatDate(event.start);
+    const endTime = formatDate(event.end);
 
     return (
         <div className="upcoming-event">
@@ -25,6 +32,9 @@ function UpcomingEvent({ event }) {
             <div className="upcoming-event__title">
                 {event.title}
             </div>
+            <IconButton size="small" className="upcoming-event__delete" onClick={() => handleDeleteEvent(event.id)}>
+                <Close/>
+            </IconButton>
         </div>
     );
 }
@@ -32,28 +42,82 @@ function UpcomingEvent({ event }) {
 function CalendarPage() {
     const localizer = momentLocalizer(moment);
     const [eventsList, setEventsList] = useState([]);
-    let now = new Date();
+    const { nottableUser } = useContext(AuthContext);
+    const { enqueueSnackbar } = useSnackbar();
+    const [confirm, setConfirm] = useState(false);
+    const [deleteEventId, setDeleteEventId] = useState('');
 
     useEffect(() => {
-        setEventsList(events);
+        fetchAllEvents(nottableUser.id)
+            .then((res) => {
+                setEventsList(res);
+            })
+            .catch(() => {
+                enqueueSnackbar('Lấy dữ liệu sự kiện thất bại', {
+                    variant: 'error'
+                });
+            });
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     function handleSelect({ start, end }) {
-        const title = window.prompt('New Event name');
-        var randomColor = Math.floor(Math.random()*16777215).toString(16);
+        let title = window.prompt('Nhập sự kiện:');
+        if (!title) return;
+        const cloneEventList = cloneDeep(eventsList);
 
-        if (title) {
-            var newEvent = {
-                id: Math.random().toString(36).replace(/[^a-z]+/g, '').substr(2, 10),
-                start: start,
-                end: end,
-                title: title,
-                color: `#${randomColor}`
-            };
-            setEventsList([...eventsList, newEvent]);
-        }
+        var newEvent = {
+            owner: nottableUser.id,
+            start: start,
+            end: end,
+            title: title,
+            color: `#${Math.floor(Math.random()*16777215).toString(16)}`
+        };
+
+        addNewEvent(newEvent)
+            .then((res) => {
+                setEventsList(prevEvent => [...prevEvent, res]);
+                enqueueSnackbar('Tạo mới sự kiện thành công', {
+                    variant: 'success'
+                });
+            })
+            .catch(() => {
+                setEventsList(cloneEventList);
+                enqueueSnackbar('Tạo mới sự kiện thất bại', {
+                    variant: 'error'
+                });
+            });
     }
+
+    const handleClosePopup = () => {
+        setConfirm(false);
+    };
+    const handleConfirm = () => {
+        let cloneEventList = cloneDeep(eventsList);
+
+        let filterList = cloneEventList.filter((event) => event.id !== deleteEventId);
+        setEventsList(filterList);
+
+        deleteEvent(deleteEventId)
+            .then(() => {
+                enqueueSnackbar('Đã xóa sự kiện', {
+                    variant: 'success'
+                });
+            })
+            .catch(() => {
+                setEventsList(cloneEventList);
+                enqueueSnackbar('Xóa sự kiện thất bại', {
+                    variant: 'error'
+                });
+            });
+
+        setConfirm(false);
+    };
+
+    const handleDeleteEvent = (id) => {
+        setDeleteEventId(id);
+        setConfirm(true);
+    };
 
     return (
         <div className="calendar-page">
@@ -61,9 +125,13 @@ function CalendarPage() {
                 <h3>Sự kiện đang diễn ra</h3>
                 <div className="calendar-page__list">
                     {
-                        eventsList.filter((event) => event.end.getTime() >= now.getTime() )
-                            .sort((a, b) => a.end.getTime() - b.end.getTime())
-                            .map((event) => <UpcomingEvent key={event.id} event={event} />)
+                        eventsList.length ? eventsList
+                            .sort((a, b) => new Date(a.end) - new Date(b.end))
+                            .map((event) => <UpcomingEvent key={event.id} event={event} handleDeleteEvent={handleDeleteEvent}/>)
+                            :
+                            <div className="calendar-page__no-event">
+                                Danh sách sự kiện rỗng
+                            </div>
                     }
                 </div>
             </div>
@@ -76,7 +144,15 @@ function CalendarPage() {
                 defaultDate={new Date()}
                 onSelectEvent={event => alert(event.title)}
                 onSelectSlot={handleSelect}
-            ></Calendar>
+            />
+            {confirm &&
+            <ConfirmPopup
+                open={confirm}
+                handleClosePopup={handleClosePopup}
+                handleConfirm={handleConfirm}
+                title='Bạn có thực sự muốn xóa sự kiện này'
+                content='Sự kiện này sẽ bị xóa đi và không thể phục hồi'
+            />}
         </div>
     );
 }

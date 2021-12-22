@@ -7,27 +7,16 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { Box } from '@mui/system';
-import { logout } from 'apiCall/auth';
+import { logout } from 'apiCall/auth.api';
 import { AuthContext } from 'context/AuthContext';
 import { useSnackbar } from 'notistack';
 import React, { useContext } from 'react';
 import { NavLink } from 'react-router-dom';
 
-function validURL(str) {
-    var pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
-      '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
-      '((\\d{1,3}\\.){3}\\d{1,3}))'+ // OR ip (v4) address
-      '(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*'+ // port and path
-      '(\\?[;&a-z\\d%_.~+=-]*)?'+ // query string
-      '(\\#[-a-z\\d_]*)?$', 'i'); // fragment locator
-    return !!pattern.test(str);
-}
-
 export default function AccountMenu() {
     const [anchorEl, setAnchorEl] = React.useState(null);
     const open = Boolean(anchorEl);
     const { enqueueSnackbar } = useSnackbar();
-    const defaultAvatar = 'https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/47c09177275483.5c82b10d5f62c.png';
     const { nottableUser, nottableTokens, dispatch } = useContext(AuthContext);
 
     const handleLogout = () => {

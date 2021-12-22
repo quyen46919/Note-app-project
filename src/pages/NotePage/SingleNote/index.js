@@ -3,11 +3,11 @@ import React from 'react';
 import './styles.scss';
 
 function SingleNote(props) {
-    const { note, deleteNote } = props;
+    const { note, handleDeleteNote } = props;
 
     return (
         <div className="single-note">
-            <Close className="single-note__actions" onClick={() => deleteNote(note.id)}/>
+            <Close className="single-note__actions" onClick={() => handleDeleteNote(note.id)}/>
             <div className="single-note--title">
                 {note.title}
             </div>
