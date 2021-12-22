@@ -1,0 +1,6 @@
+@import 'assets/scss/variables';
+
+.board-page {
+    height: calc(100% - #{$headerHeigh});
+    width: 100%;
+}

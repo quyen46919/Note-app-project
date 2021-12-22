@@ -1,8 +1,8 @@
 import {
-    CreateOutlined, FavoriteBorder, HomeOutlined, LightOutlined, PersonOutlined, TranslateOutlined
+    AccountBoxOutlined,
+    CreateOutlined, Event, HomeOutlined, LogoutOutlined
 } from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu';
-import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNoneOutlined';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
@@ -45,23 +45,23 @@ export default function LeftDrawer() {
                         <ListItemIcon>
                             <HomeOutlined/>
                         </ListItemIcon>
-                        <ListItemText primary="Giới thiệu" />
+                        <ListItemText primary="Trang chủ" />
                     </ListItem>
                 </Link>
-                <Link to="/home" exact="true" className="header-drawer__link">
+                <Link to="/note" exact="true" className="header-drawer__link">
                     <ListItem button className="header-drawer__list-item">
                         <ListItemIcon>
                             <CreateOutlined/>
                         </ListItemIcon>
-                        <ListItemText primary="Trang chủ" />
+                        <ListItemText primary="Ghi chú đơn" />
                     </ListItem>
                 </Link>
-                <Link to="/home/account" exact="true" className="header-drawer__link">
+                <Link to="/calendar" exact="true" className="header-drawer__link">
                     <ListItem button className="header-drawer__list-item">
                         <ListItemIcon>
-                            <PersonOutlined/>
+                            <Event/>
                         </ListItemIcon>
-                        <ListItemText primary="Cá nhân" />
+                        <ListItemText primary="Lịch và đặt lịch" />
                     </ListItem>
                 </Link>
             </List>
@@ -69,27 +69,15 @@ export default function LeftDrawer() {
             <List>
                 <ListItem button className="header-drawer__list-item">
                     <ListItemIcon>
-                        <FavoriteBorder/>
+                        <AccountBoxOutlined/>
                     </ListItemIcon>
-                    <ListItemText primary="Danh sách yêu thích" />
+                    <ListItemText primary="Tài khoản" />
                 </ListItem>
                 <ListItem button className="header-drawer__list-item">
                     <ListItemIcon>
-                        <TranslateOutlined/>
+                        <LogoutOutlined/>
                     </ListItemIcon>
-                    <ListItemText primary="Đổi ngôn ngữ" />
-                </ListItem>
-                <ListItem button className="header-drawer__list-item">
-                    <ListItemIcon>
-                        <LightOutlined/>
-                    </ListItemIcon>
-                    <ListItemText primary="Chế độ tối" />
-                </ListItem>
-                <ListItem button className="header-drawer__list-item">
-                    <ListItemIcon>
-                        <NotificationsNoneOutlinedIcon/>
-                    </ListItemIcon>
-                    <ListItemText primary="Thông báo" />
+                    <ListItemText primary="Đăng xuất" />
                 </ListItem>
             </List>
         </Box>

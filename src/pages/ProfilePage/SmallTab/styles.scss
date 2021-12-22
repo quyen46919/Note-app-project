@@ -1,0 +1,55 @@
+@import 'assets/scss/mixins';
+@import 'assets/scss/variables';
+
+.small-tab {
+    width: 100%;
+    height: auto;
+    margin-top: 0.5rem;
+    @include displayFlex(column, wrap, flex-start, flex-start);
+
+    &__name {
+        input {
+            font-size: 32px!important;
+            color: $blue!important;
+            font-weight: 600;
+            padding: 10px 0!important;
+        }
+        
+        * {
+            border: none!important;
+            transition: all $primary-transition;
+        }
+    }
+
+    &__name input:focus {
+        border: 1px solid $blue!important;
+        padding-left: 1.2rem!important;
+        border-radius: 10px;
+    }
+
+    &__description {
+        text-align: left;
+        color: $black-text-color-2;
+    }
+
+    &__content {
+        width: 100%;
+        height: auto;
+        @include displayGrid(220px);
+    }
+
+    &__list {
+        width: 100%;
+
+        input {
+            width: 100%!important;
+        }
+    }
+
+    &__title {
+        font-size: 14px;
+        color: $blue;
+        text-transform: uppercase;
+    }
+    
+}

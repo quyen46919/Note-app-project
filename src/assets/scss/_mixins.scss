@@ -31,10 +31,24 @@
     flex-wrap: $wrap;
 }
 
+@mixin displayGrid($minWidth: 260px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax($minWidth, 1fr));
+}
+
+@mixin textOverflowEllipsis($line: 3){
+    display: -webkit-box;
+    -webkit-line-clamp: $line;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
 @mixin ScrollBarCustom() {
     &::-webkit-scrollbar{
         -webkit-appearance: none;
-        width: 10px;
+        width: 6px;
     }
     &::-webkit-scrollbar-thumb{
         background: rgb(214, 214, 214);

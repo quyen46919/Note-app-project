@@ -13,9 +13,11 @@ $orange: #FF8A00;
 $cyan: #00C4D4;
 $purple: #9DA6FF;
 $green: #90EB9E;
+$medium-green: #36C857;
 $dark-green:#4DA85C;
 $cyan-green:#3FE9B5;
 $black: #373737;
+$red: #d32f2f;
 $light-blue-1: #9BD5FD;
 $medium-blue: #4EA4DC;
 $cyan-blue-1: #3DDDF3;
@@ -26,16 +28,19 @@ $black-text-color-1: #2C3337;
 $black-text-color-2: #52535A;
 $black-text-color-3: #616161;
 $black-text-color-4: #4B4B4B;
+$black-text-color-5: #5F657C;
 $silver-text-color: #9E9E9E;
-$silver-text-color-2: #BCBCBC;
 
 $black-text-color-5: #5f5f5f;
 $black-text-color-6: #000000;
 $gray-text-color-1:#7B7B7B;
 $silver-text-color: #9E9E9E;
+$silver-text-color-2: #BCBCBC;
+$silver-text-color-3: #F5F7F9;
 $cyan-text-color-1: #0078CF;
 $cyan-text-color-2: #43B5FF;
 
+$calendar-btn-group-color: #d2edfa;
 $color-link: #7acaf1;
 $color-gg: #ea4335;
 $color-tw: #1da1f2;
@@ -47,6 +52,17 @@ $color-link-3: #4eb8ec;
 $color-link-4: #60ade5;
 $color-page-login: #f8f8f8;
 $font-text-color-3: #a6a6a6;
+
+$dark-blue-1: #20315B;
+$subtitle-text-color: #878691;
+$gray-text-color: #A4ACB8;
+$silver-background-1: #F9F9F9;
+
+$primary-transition: .18s ease-in-out;
+$secondary-transition: .25s ease-in-out;
+$primary-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 18px;
+$secondary-box-shadow: rgba(182, 189, 196, 0.2) 0px 8px 18px;
+$third-box-shadow: rgba(230, 230, 230, 0.2) 0px 8px 18px;
 
 // DECLARE SIZE GLOBAL VARIABLE
 $xs: 0;             //  <576px

@@ -1,0 +1,24 @@
+@import 'assets/scss/variables';
+@import 'assets/scss/mixins';
+
+.note-page {
+    width: 100%;
+    height: 1px;
+    min-height: calc(100vh - #{$headerHeigh})!important;
+    background-color: $silver-text-color-3;
+    overflow-y: scroll;
+    @include ScrollBarCustom();
+    overflow-x: hidden;
+
+    &__search-bar {
+        @include padding(2rem 6rem 0);
+    }
+
+    &__list {
+        width: 100%;
+        @include padding(2rem 6rem);
+        height: auto;
+        column-count: 4;
+        column-gap: 1.6rem;
+    }
+}
