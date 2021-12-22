@@ -12,7 +12,7 @@ export const initialNoteData = {
                     boardId: 'board-1',
                     isFavorite: false,
                     title: 'To do column',
-                    cardOrder: ['card-1', 'card-2', 'card-3', 'card-4', 'card-5', 'card-6', 'card-7'],
+                    cardOrder: ['card-3', 'card-2', 'card-1', 'card-4', 'card-5', 'card-6', 'card-7'],
                     cards: [
                         {
                             id: 'card-1',

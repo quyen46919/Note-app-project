@@ -1,0 +1,86 @@
+@import 'assets/scss/mixins';
+@import 'assets/scss/variables';
+
+.tab-page {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    @include displayFlex(row, wrap, center, flex-start);
+    @include padding(2rem 4rem);
+    gap: 4rem;
+
+    @include maxWidth($lg) {
+        @include padding(2rem);
+        gap: 2rem;
+    }
+    @include maxWidth($md) {
+        flex-direction: column;
+    }
+
+    &__left {
+        width: 270px;
+        height: auto;
+        @include displayFlex(column, wrap, center, center);
+        gap: 1rem;
+
+        @include maxWidth($md) {
+            width: 100%;
+        }
+    }
+
+    &__dummy{
+        @include maxWidth($md) {
+            display: none;
+        }
+    }
+
+    &__avatar {
+        width: 100%;
+        background-image: url('../../../assets/images/intro-ChauPhat.jpg');
+        background-position: center;
+        background-size: cover;
+        height: 380px;
+        border-radius: 10px;
+
+        @include maxWidth($md) {
+            background-position: center;
+            height: 280px;
+        }
+    }
+
+    &__right {
+        width: calc(100% - 300px - 5rem);
+        height: auto;
+
+        @include maxWidth($md) {
+            width: 100%;
+        }
+    }
+
+    &__name {
+        width: 100%;
+        @include displayFlex(column, wrap, center, flex-start);
+        gap: 0.3rem;
+        
+        h3, p {
+            margin: 0;
+        }
+
+        h3 { 
+            font-size: 32px;
+            color: $blue;
+        }
+
+        p {
+            font-size: 16px;
+            color: $black-text-color-2;
+            font-weight: 500;
+        }
+
+        @include maxWidth($md) {
+            h3 { 
+                font-size: 28px;
+            }
+        }
+    }
+}
